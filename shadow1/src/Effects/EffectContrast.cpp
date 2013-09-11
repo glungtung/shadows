@@ -15,7 +15,3 @@ void EffectContrast::apply(ofBaseHasPixels& source)
 
 }
 
-int EffectContrast::drawGUI()
-{
-    
-}

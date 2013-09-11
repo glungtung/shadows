@@ -3,21 +3,21 @@
 #include "ofMain.h"
 #include "ofxCv.h"
 #include "WebcamGrab.h"
-#include "EffectThreshold.h"
-#include "EffectUndistort.h"
-#include "EffectConvert2Gray.h"
+#include "EffectsGroup.h"
+#include "EffectsFactory.h"
 
 class testApp : public ofBaseApp {
 public:
 	void setup();
 	void update();
 	void draw();
+    
+    void createBaseEffects();
 	
 	ofVideoGrabber cam;
 	ofImage undistorted, shadowImage;
     ofTexture tex;
     
-    EffectThreshold thresh;
-    EffectUndistort undistort;
-    EffectConvert2Gray gray;
+    EffectsGroup effects;
+    EffectsFactory effectsFactory;
 };

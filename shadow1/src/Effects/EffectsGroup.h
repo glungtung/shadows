@@ -16,13 +16,14 @@ public:
     EffectsGroup();
     ~EffectsGroup();
     
+    void init();
     void apply(ofBaseHasPixels& source);
     void drawGUI();
     
-    void addEffect(ofPtr<ImageEffectWithGUI>);
+    void addEffect(ofPtr<ImageEffectInterface>);
     
 private:
-    vector< ofPtr <ImageEffectWithGUI> > effects;
+    vector< ofPtr <ImageEffectInterface> > effects;
 };
 
 
