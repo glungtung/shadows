@@ -12,13 +12,11 @@
 #include "ImageEffectInterface.h"
 #include "ofxCv.h"
 
-class EffectThreshold : public ImageEffectInterface {
+class EffectThreshold : public ImageEffectWithGUI {
 public:
-    EffectThreshold();
-    ~EffectThreshold();
-    
-    void apply(ofPixels & source);
-    int drawGUI();
+    ~EffectThreshold() {};
+    void apply(ofBaseHasPixels& source);
+    void drawGUI();
     
 private:
     int thresholdValue;

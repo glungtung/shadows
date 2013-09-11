@@ -11,23 +11,14 @@
 using namespace cv;
 using namespace ofxCv;
 
-EffectThreshold::EffectThreshold()
+
+void EffectThreshold::apply(ofBaseHasPixels& source)
 {
-    
+    if (source.getPixelsRef().getImageType() == OF_IMAGE_GRAYSCALE)
+        autothreshold(source.getPixelsRef());
 }
 
-EffectThreshold::~EffectThreshold()
-{
-    
-}
-
-void EffectThreshold::apply(ofPixels & source)
-{
-    if (source.getImageType() == OF_IMAGE_GRAYSCALE)
-        autothreshold(source);
-}
-
-int EffectThreshold::drawGUI()
+void EffectThreshold::drawGUI()
 {
     
 }

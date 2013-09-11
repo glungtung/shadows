@@ -4,6 +4,8 @@
 #include "ofxCv.h"
 #include "WebcamGrab.h"
 #include "EffectThreshold.h"
+#include "EffectUndistort.h"
+#include "EffectConvert2Gray.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -12,10 +14,10 @@ public:
 	void draw();
 	
 	ofVideoGrabber cam;
-	ofImage undistorted;
-    ofPixels shadowImage;
+	ofImage undistorted, shadowImage;
     ofTexture tex;
-	ofxCv::Calibration calibration;
     
     EffectThreshold thresh;
+    EffectUndistort undistort;
+    EffectConvert2Gray gray;
 };

@@ -11,21 +11,15 @@
 using namespace cv;
 using namespace ofxCv;
 
-EffectUndistort::EffectUndistort()
+void EffectUndistort::init()
 {
-    
+    calibration.setFillFrame(true); // true by default
+	calibration.load("mbp-2011-isight.yml");
 }
 
-EffectUndistort::~EffectUndistort()
+void EffectUndistort::apply(ofBaseHasPixels& source)
 {
-    
+    calibration.undistort(toCv(source));
 }
 
-void EffectUndistort::apply(ofPixels & source)
-{
-}
 
-int EffectUndistort::drawGUI()
-{
-    
-}

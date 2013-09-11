@@ -13,6 +13,7 @@
 
 class ImageGrabInterface : public ofBaseHasPixels {
 public:
+    virtual ~ImageGrabInterface() {};
     virtual void init() = 0;
     virtual void update() = 0;
     virtual bool isFrameNew() = 0;

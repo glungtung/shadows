@@ -42,6 +42,7 @@
 		F065BFB417DF698B000F3FA7 /* EffectThreshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */; };
 		F065BFB717DF69D1000F3FA7 /* EffectsGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */; };
 		F0D527D017E0726F008B2BF3 /* EffectUndistort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */; };
+		F0D527D317E0E16F008B2BF3 /* EffectConvert2Gray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */; };
 		a6668c5b1272d7fcd5b5a16fd76b2bf8 /* Utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6cec50db3d06414010233963bcd8b3fb /* Utilities.cpp */; };
 		b6840996567e78436f7ecfab2ec70089 /* ETF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = b047ff96258dc01792b272db036111a0 /* ETF.cpp */; };
 		c602002de761f9b52db4400a48aeaa29 /* ObjectFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ae75a3fba2c2d87d14f06fe629699ca4 /* ObjectFinder.cpp */; };
@@ -187,11 +188,13 @@
 		F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectThreshold.cpp; sourceTree = "<group>"; };
 		F065BFB017DF698B000F3FA7 /* EffectThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectThreshold.h; sourceTree = "<group>"; };
 		F065BFB117DF698B000F3FA7 /* ImageEffectInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEffectInterface.h; sourceTree = "<group>"; };
-		F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGrabInterface.h; sourceTree = "<group>"; };
+		F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGrabInterface.h; path = Effects/ImageGrabInterface.h; sourceTree = "<group>"; };
 		F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectsGroup.cpp; sourceTree = "<group>"; };
 		F065BFB617DF69D1000F3FA7 /* EffectsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsGroup.h; sourceTree = "<group>"; };
 		F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectUndistort.cpp; sourceTree = "<group>"; };
 		F0D527CF17E0726E008B2BF3 /* EffectUndistort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectUndistort.h; sourceTree = "<group>"; };
+		F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectConvert2Gray.cpp; sourceTree = "<group>"; };
+		F0D527D217E0E16F008B2BF3 /* EffectConvert2Gray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectConvert2Gray.h; sourceTree = "<group>"; };
 		a0399084868e7cafb7e3d8e975d55095 /* retina.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = retina.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/contrib/retina.hpp; sourceTree = SOURCE_ROOT; };
 		a15e0125b8c9b7f01ded56958ff73de8 /* matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = matrix.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/matrix.h; sourceTree = SOURCE_ROOT; };
 		a2d8249d46647e3c51769cde310dd5b2 /* fdog.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = fdog.cpp; path = ../../../addons/ofxCv/libs/CLD/src/fdog.cpp; sourceTree = SOURCE_ROOT; };
@@ -224,7 +227,7 @@
 		d5a3aff36064b2cacad317169b9c3159 /* composite_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = composite_index.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/composite_index.h; sourceTree = SOURCE_ROOT; };
 		d5bb6f0357b6422e1b1656b47b78dcdf /* ofxCvColorImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCvColorImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvColorImage.h; sourceTree = SOURCE_ROOT; };
 		d76a59e7b3601e76351c9bdb38a0ea4f /* cvaux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cvaux.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/cvaux.h; sourceTree = SOURCE_ROOT; };
-		d847ebe484f4f500f9cf25492c7beddc /* ofxCvImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCvImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvImage.h; sourceTree = SOURCE_ROOT; };
+		d847ebe484f4f500f9cf25492c7beddc /* ofxCvImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; lineEnding = 0; name = ofxCvImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvImage.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		d902eb2409214285bcf5f1914864e8b9 /* stream_accessor.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stream_accessor.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/stream_accessor.hpp; sourceTree = SOURCE_ROOT; };
 		db0cd4c938c079dcd67222fe410ad289 /* imatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imatrix.h; path = ../../../addons/ofxCv/libs/CLD/include/CLD/imatrix.h; sourceTree = SOURCE_ROOT; };
 		db8653d6433e14bf06f3efaf1c39f40a /* cvwimage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cvwimage.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/cvwimage.h; sourceTree = SOURCE_ROOT; };
@@ -603,6 +606,7 @@
 			children = (
 				F065BFAC17DF698B000F3FA7 /* Effects */,
 				F065BF9C17DB0E85000F3FA7 /* WebcamGrab.cpp */,
+				F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */,
 				F065BF9D17DB0E85000F3FA7 /* WebcamGrab.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
@@ -631,8 +635,9 @@
 				F065BFAE17DF698B000F3FA7 /* EffectContrast.h */,
 				F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */,
 				F065BFB017DF698B000F3FA7 /* EffectThreshold.h */,
+				F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */,
+				F0D527D217E0E16F008B2BF3 /* EffectConvert2Gray.h */,
 				F065BFB117DF698B000F3FA7 /* ImageEffectInterface.h */,
-				F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */,
 			);
 			path = Effects;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				F065BFB417DF698B000F3FA7 /* EffectThreshold.cpp in Sources */,
 				F065BFB717DF69D1000F3FA7 /* EffectsGroup.cpp in Sources */,
 				F0D527D017E0726F008B2BF3 /* EffectUndistort.cpp in Sources */,
+				F0D527D317E0E16F008B2BF3 /* EffectConvert2Gray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

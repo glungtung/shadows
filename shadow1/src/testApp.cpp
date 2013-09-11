@@ -6,27 +6,25 @@ using namespace cv;
 void testApp::setup() {
 	ofSetVerticalSync(true);
 	cam.initGrabber(640, 480);
-	calibration.setFillFrame(true); // true by default
-	calibration.load("mbp-2011-isight.yml");
-	imitate(undistorted, cam);
-	shadowImage.allocate(640, 480, OF_IMAGE_GRAYSCALE);
-    tex.allocate(shadowImage);
+    undistort.init();
 }
 
 void testApp::update() {
 	cam.update();
 	if(cam.isFrameNew()) {
-		calibration.undistort(toCv(cam), toCv(undistorted));
-        convertColor(undistorted, shadowImage, CV_RGB2GRAY);
-
+        shadowImage.setFromPixels(cam.getPixelsRef());
+        gray.apply(shadowImage);
+        undistort.apply(shadowImage);
         thresh.apply(shadowImage);
         
+        shadowImage.update();
 	}
 }
 
 void testApp::draw() {
 	ofSetColor(255);
-	cam.draw(0, 0);
-	tex.loadData(shadowImage);
-    tex.draw(640, 0);
+	
+    cam.draw(0, 0);
+    if (shadowImage.isAllocated())
+        shadowImage.draw(640, 0);
 }

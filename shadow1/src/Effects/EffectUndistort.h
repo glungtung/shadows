@@ -14,13 +14,13 @@
 
 class EffectUndistort : public ImageEffectInterface {
 public:
-    EffectUndistort();
-    ~EffectUndistort();
-    
-    void apply(ofPixels & source);
-    int drawGUI();
+    ~EffectUndistort() {};
+    void init();
+    void apply(ofBaseHasPixels& source);
     
 private:
+    ofxCv::Calibration calibration;
+
 };
 
 

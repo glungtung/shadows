@@ -8,17 +8,9 @@
 
 #include "EffectContrast.h"
 
-EffectContrast::EffectContrast()
-{
-    
-}
 
-EffectContrast::~EffectContrast()
-{
-    
-}
 
-void EffectContrast::apply(ofPixels & source)
+void EffectContrast::apply(ofBaseHasPixels& source)
 {
 
 }

@@ -20,11 +20,11 @@ EffectsGroup::~EffectsGroup()
     
 }
 
-void EffectsGroup::apply(ofPixels & source)
+void EffectsGroup::apply(ofBaseHasPixels& source)
 {
 }
 
-int EffectsGroup::drawGUI()
+void EffectsGroup::drawGUI()
 {
     
 }

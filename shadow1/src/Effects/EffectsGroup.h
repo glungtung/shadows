@@ -11,18 +11,18 @@
 
 #include "ImageEffectInterface.h"
 
-class EffectsGroup : public ImageEffectInterface {
+class EffectsGroup : public ImageEffectWithGUI {
 public:
     EffectsGroup();
     ~EffectsGroup();
     
-    void apply(ofPixels & source);
-    int drawGUI();
+    void apply(ofBaseHasPixels& source);
+    void drawGUI();
     
-    void addEffect(ofPtr<ImageEffectInterface>);
+    void addEffect(ofPtr<ImageEffectWithGUI>);
     
 private:
-    vector< ofPtr <ImageEffectInterface> > effects;
+    vector< ofPtr <ImageEffectWithGUI> > effects;
 };
 
 

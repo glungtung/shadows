@@ -13,10 +13,8 @@
 
 class EffectContrast : public ImageEffectInterface {
 public:
-    EffectContrast();
     ~EffectContrast();
-    
-    void apply(ofPixels & source);
+    void apply(ofBaseHasPixels& source);
     int drawGUI();
     
 private:
