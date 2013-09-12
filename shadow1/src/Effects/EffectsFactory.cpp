@@ -11,26 +11,11 @@
 #include "EffectUndistort.h"
 #include "EffectThreshold.h"
 #include "EffectContrast.h"
+#include "EffectErodeDilate.h"
+#include "EffectHistNorm.h"
 
 
-/*
-ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
-{
-    if (name == "ConvertToGray") {
-         return ofPtr<ImageEffectInterface>(new EffectConvert2Gray());
-    }
-    else if (name == "Undistort") {
-        return ofPtr<ImageEffectInterface>(new EffectUndistort());
-    }
-    else if (name == "Threshold") {
-        return ofPtr<ImageEffectWithGUI>(new EffectThreshold());
-    }
-    else if (name == "Constrast") {
-        return ofPtr<ImageEffectInterface>(new EffectContrast());
-    }
-    else return ofPtr<ImageEffectInterface>();
 
-}*/
 
  
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
@@ -51,6 +36,16 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     else if (name == "Constrast") {
         EffectContrast *effect = new EffectContrast();
         return ofPtr<ImageEffectInterface>(effect);
+    }
+    else if (name == "ErodeDilate") {
+        EffectErodeDilate *effect = new EffectErodeDilate();
+        effect->setName("Erode and Dilate");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Equalize") {
+        EffectHistNorm *effect = new EffectHistNorm();
+        effect->setName("Equalize");
+        return ofPtr<ImageEffectWithGUI>(effect);
     }
     else return ofPtr<ImageEffectInterface>();
   

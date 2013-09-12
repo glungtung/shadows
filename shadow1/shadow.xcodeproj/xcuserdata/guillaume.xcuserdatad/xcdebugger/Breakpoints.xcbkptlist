@@ -45,11 +45,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/Effects/EffectsGroup.cpp"
-         timestampString = "400679172.112858"
+         timestampString = "400699976.050436"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "EffectsGroup::apply(ofBaseHasPixels&amp; source)"
          landmarkType = "5">
       </FileBreakpoint>

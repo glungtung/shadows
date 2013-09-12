@@ -14,8 +14,6 @@ using namespace ofxCv;
 
 void EffectThreshold::initGUI()
 {
-    std::cout << "EffectThreshold::initGUI()" << std::endl;
-    
     addParameter(automatic.set("Automatic",true));
 	addParameter(thresholdValue.set("Thresh value",100,0,255));
 }
@@ -31,6 +29,7 @@ void EffectThreshold::apply(ofBaseHasPixels& source)
                 autothreshold(source.getPixelsRef());
             else
                 threshold(source.getPixelsRef(), thresholdValue);
+
         }
     }
 }

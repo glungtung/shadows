@@ -41,6 +41,8 @@
 		F065BFB317DF698B000F3FA7 /* EffectContrast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFAD17DF698B000F3FA7 /* EffectContrast.cpp */; };
 		F065BFB417DF698B000F3FA7 /* EffectThreshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */; };
 		F065BFB717DF69D1000F3FA7 /* EffectsGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */; };
+		F093467F17E21CD900A84DD4 /* EffectErodeDilate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093467E17E21CD800A84DD4 /* EffectErodeDilate.cpp */; };
+		F093468217E224DF00A84DD4 /* EffectHistNorm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093468117E224DF00A84DD4 /* EffectHistNorm.cpp */; };
 		F0D527D017E0726F008B2BF3 /* EffectUndistort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */; };
 		F0D527D317E0E16F008B2BF3 /* EffectConvert2Gray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */; };
 		F0D527D617E0FE4D008B2BF3 /* EffectsFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527D517E0FE4D008B2BF3 /* EffectsFactory.cpp */; };
@@ -200,6 +202,10 @@
 		F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGrabInterface.h; path = Effects/ImageGrabInterface.h; sourceTree = "<group>"; };
 		F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectsGroup.cpp; sourceTree = "<group>"; };
 		F065BFB617DF69D1000F3FA7 /* EffectsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsGroup.h; sourceTree = "<group>"; };
+		F093467D17E21CD800A84DD4 /* EffectErodeDilate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectErodeDilate.h; sourceTree = "<group>"; };
+		F093467E17E21CD800A84DD4 /* EffectErodeDilate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectErodeDilate.cpp; sourceTree = "<group>"; };
+		F093468017E224DF00A84DD4 /* EffectHistNorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectHistNorm.h; sourceTree = "<group>"; };
+		F093468117E224DF00A84DD4 /* EffectHistNorm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectHistNorm.cpp; sourceTree = "<group>"; };
 		F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectUndistort.cpp; sourceTree = "<group>"; };
 		F0D527CF17E0726E008B2BF3 /* EffectUndistort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectUndistort.h; sourceTree = "<group>"; };
 		F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectConvert2Gray.cpp; sourceTree = "<group>"; };
@@ -661,6 +667,10 @@
 				F0D527D517E0FE4D008B2BF3 /* EffectsFactory.cpp */,
 				F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */,
 				F065BFB617DF69D1000F3FA7 /* EffectsGroup.h */,
+				F093468017E224DF00A84DD4 /* EffectHistNorm.h */,
+				F093468117E224DF00A84DD4 /* EffectHistNorm.cpp */,
+				F093467D17E21CD800A84DD4 /* EffectErodeDilate.h */,
+				F093467E17E21CD800A84DD4 /* EffectErodeDilate.cpp */,
 				F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */,
 				F0D527CF17E0726E008B2BF3 /* EffectUndistort.h */,
 				F065BFAD17DF698B000F3FA7 /* EffectContrast.cpp */,
@@ -947,6 +957,8 @@
 				F0D527F417E1DE9C008B2BF3 /* ofxSlider.cpp in Sources */,
 				F0D527F517E1DE9C008B2BF3 /* ofxSliderGroup.cpp in Sources */,
 				F0D527F617E1DE9C008B2BF3 /* ofxToggle.cpp in Sources */,
+				F093467F17E21CD900A84DD4 /* EffectErodeDilate.cpp in Sources */,
+				F093468217E224DF00A84DD4 /* EffectHistNorm.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

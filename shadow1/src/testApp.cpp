@@ -37,7 +37,9 @@ void testApp::createBaseEffects() {
     effects.setName("Camera Effects Group");
     effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
     effects.addEffect(effectsFactory.createEffect("Undistort"));
+    effects.addEffect(effectsFactory.createEffect("Equalize"));
     effects.addEffect(effectsFactory.createEffect("Threshold"));
+    effects.addEffect(effectsFactory.createEffect("ErodeDilate"));
     effects.addEffect(effectsFactory.createEffect(""));
     effects.addEffect(effectsFactory.createEffect(""));
 }
