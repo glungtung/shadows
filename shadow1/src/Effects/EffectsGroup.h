@@ -27,6 +27,7 @@ public:
 private:
     vector< ofPtr <ImageEffectInterface> > effects;
     ofxPanel gui;
+    ofParameter<string> fps;
 };
 
 

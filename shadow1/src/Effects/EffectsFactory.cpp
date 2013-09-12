@@ -13,9 +13,7 @@
 #include "EffectContrast.h"
 #include "EffectErodeDilate.h"
 #include "EffectHistNorm.h"
-
-
-
+#include "EffectBackground.h"
 
  
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
@@ -45,6 +43,11 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     else if (name == "Equalize") {
         EffectHistNorm *effect = new EffectHistNorm();
         effect->setName("Equalize");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Background") {
+        EffectBackground *effect = new EffectBackground();
+        effect->setName("Background");
         return ofPtr<ImageEffectWithGUI>(effect);
     }
     else return ofPtr<ImageEffectInterface>();

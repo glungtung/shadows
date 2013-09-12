@@ -15,8 +15,7 @@ public:
     void createBaseEffects();
 	
 	ofVideoGrabber cam;
-	ofImage undistorted, shadowImage;
-    ofTexture tex;
+	ofImage  shadowImage;
     
     EffectsGroup effects;
     EffectsFactory effectsFactory;

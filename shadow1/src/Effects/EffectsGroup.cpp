@@ -23,6 +23,7 @@ EffectsGroup::~EffectsGroup()
 void EffectsGroup::init()
 {
     ImageEffectWithGUI::init();
+    addParameter(fps);
     for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
         (*it)->init(this);
     }
@@ -41,6 +42,8 @@ void EffectsGroup::apply(ofBaseHasPixels& source)
 
 void EffectsGroup::draw()
 {
+    //fps.setName(ofToString(ofGetFrameRate()) + "fps");
+    fps.set(ofToString((int)ofGetFrameRate()) + "fps");
     gui.draw();
     for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
         (*it)->draw();
