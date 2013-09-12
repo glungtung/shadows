@@ -16,10 +16,11 @@ class EffectThreshold : public ImageEffectWithGUI {
 public:
     ~EffectThreshold() {};
     void apply(ofBaseHasPixels& source);
-    void drawGUI();
+    void initGUI();
     
 private:
-    int thresholdValue;
+    ofParameter<bool> automatic;
+	ofParameter<int> thresholdValue;
 };
 
 

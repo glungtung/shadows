@@ -7,9 +7,13 @@
 //
 
 #include "EffectsFactory.h"
+#include "EffectConvert2Gray.h"
+#include "EffectUndistort.h"
+#include "EffectThreshold.h"
+#include "EffectContrast.h"
 
 
-
+/*
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
 {
     if (name == "ConvertToGray") {
@@ -26,4 +30,29 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     }
     else return ofPtr<ImageEffectInterface>();
 
+}*/
+
+ 
+ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
+{
+    if (name == "ConvertToGray") {
+        EffectConvert2Gray *effect =  new EffectConvert2Gray();
+        return ofPtr<ImageEffectInterface>(effect);
+    }
+    else if (name == "Undistort") {
+        EffectUndistort *effect = new EffectUndistort();
+        return ofPtr<ImageEffectInterface>(effect);
+    }
+    else if (name == "Threshold") {
+        EffectThreshold *effect = new EffectThreshold();
+        effect->setName("Cam Threshold");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Constrast") {
+        EffectContrast *effect = new EffectContrast();
+        return ofPtr<ImageEffectInterface>(effect);
+    }
+    else return ofPtr<ImageEffectInterface>();
+  
 }
+  

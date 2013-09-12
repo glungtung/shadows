@@ -22,9 +22,11 @@ EffectsGroup::~EffectsGroup()
 
 void EffectsGroup::init()
 {
+    ImageEffectWithGUI::init();
     for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
-        (*it)->init();
+        (*it)->init(this);
     }
+    gui.setup(parameters);
 }
 
 void EffectsGroup::apply(ofBaseHasPixels& source)
@@ -34,9 +36,12 @@ void EffectsGroup::apply(ofBaseHasPixels& source)
     }
 }
 
-void EffectsGroup::drawGUI()
+void EffectsGroup::draw()
 {
-    
+    gui.draw();
+    for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
+        (*it)->draw();
+    }
 }
 
 void EffectsGroup::addEffect(ofPtr<ImageEffectInterface> effect) {

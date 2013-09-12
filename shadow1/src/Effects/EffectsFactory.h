@@ -11,10 +11,7 @@
 
 #include "ofMain.h"
 #include "ImageEffectInterface.h"
-#include "EffectUndistort.h"
-#include "EffectThreshold.h"
-#include "EffectConvert2Gray.h"
-#include "EffectContrast.h"
+
 
 
 class EffectsFactory {

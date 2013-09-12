@@ -10,6 +10,7 @@
 #define shadow_EffectsGroup_h
 
 #include "ImageEffectInterface.h"
+#include "ofxGui.h"
 
 class EffectsGroup : public ImageEffectWithGUI {
 public:
@@ -18,12 +19,14 @@ public:
     
     void init();
     void apply(ofBaseHasPixels& source);
-    void drawGUI();
     
     void addEffect(ofPtr<ImageEffectInterface>);
     
+    void draw();
+    
 private:
     vector< ofPtr <ImageEffectInterface> > effects;
+    ofxPanel gui;
 };
 
 

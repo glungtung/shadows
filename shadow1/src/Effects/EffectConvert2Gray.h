@@ -12,7 +12,7 @@
 #include "ImageEffectInterface.h"
 #include "ofxCv.h"
 
-class EffectConvert2Gray : public ImageEffectWithGUI {
+class EffectConvert2Gray : public ImageEffectInterface {
 public:
     ~EffectConvert2Gray() {};
     void apply(ofBaseHasPixels& source);

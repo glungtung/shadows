@@ -3,6 +3,7 @@
 using namespace ofxCv;
 using namespace cv;
 
+//-----------------------------------------------------------------------------
 void testApp::setup() {
 	ofSetVerticalSync(true);
 	cam.initGrabber(640, 480);
@@ -10,6 +11,7 @@ void testApp::setup() {
     effects.init();
 }
 
+//-----------------------------------------------------------------------------
 void testApp::update() {
 	cam.update();
 	if(cam.isFrameNew()) {
@@ -19,23 +21,23 @@ void testApp::update() {
 	}
 }
 
+//-----------------------------------------------------------------------------
 void testApp::draw() {
 	ofSetColor(255);
 	
     cam.draw(0, 0);
     if (shadowImage.isAllocated())
         shadowImage.draw(640, 0);
-    effects.drawGUI();
+    effects.draw();
 }
 
-
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 void testApp::createBaseEffects() {
+    effects.setName("Camera Effects Group");
     effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
     effects.addEffect(effectsFactory.createEffect("Undistort"));
     effects.addEffect(effectsFactory.createEffect("Threshold"));
     effects.addEffect(effectsFactory.createEffect(""));
     effects.addEffect(effectsFactory.createEffect(""));
-
-
-
 }

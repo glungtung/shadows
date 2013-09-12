@@ -13,6 +13,7 @@ using namespace ofxCv;
 
 void EffectUndistort::init()
 {
+    std::cout << "EffectUndistort::init()" << std::endl;
     calibration.setFillFrame(true); // true by default
 	calibration.load("mbp-2011-isight.yml");
 }

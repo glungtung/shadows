@@ -12,13 +12,26 @@ using namespace cv;
 using namespace ofxCv;
 
 
-void EffectThreshold::apply(ofBaseHasPixels& source)
+void EffectThreshold::initGUI()
 {
-    if (source.getPixelsRef().getImageType() == OF_IMAGE_GRAYSCALE)
-        autothreshold(source.getPixelsRef());
+    std::cout << "EffectThreshold::initGUI()" << std::endl;
+    
+    addParameter(automatic.set("Automatic",true));
+	addParameter(thresholdValue.set("Thresh value",100,0,255));
 }
 
-void EffectThreshold::drawGUI()
+
+void EffectThreshold::apply(ofBaseHasPixels& source)
 {
-    
+    if (isActive)
+    {
+        if (source.getPixelsRef().getImageType() == OF_IMAGE_GRAYSCALE)
+        {
+            if (automatic)
+                autothreshold(source.getPixelsRef());
+            else
+                threshold(source.getPixelsRef(), thresholdValue);
+        }
+    }
 }
+
