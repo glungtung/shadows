@@ -37,13 +37,31 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
-		F065BF9E17DB0E85000F3FA7 /* WebcamGrab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BF9C17DB0E85000F3FA7 /* WebcamGrab.cpp */; };
 		F065BFB317DF698B000F3FA7 /* EffectContrast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFAD17DF698B000F3FA7 /* EffectContrast.cpp */; };
 		F065BFB417DF698B000F3FA7 /* EffectThreshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */; };
 		F065BFB717DF69D1000F3FA7 /* EffectsGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */; };
 		F093467F17E21CD900A84DD4 /* EffectErodeDilate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093467E17E21CD800A84DD4 /* EffectErodeDilate.cpp */; };
 		F093468217E224DF00A84DD4 /* EffectHistNorm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093468117E224DF00A84DD4 /* EffectHistNorm.cpp */; };
 		F093468617E263D000A84DD4 /* EffectBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093468517E263CF00A84DD4 /* EffectBackground.cpp */; };
+		F09346A817E34C4200A84DD4 /* WebcamGrab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F09346A617E34C4200A84DD4 /* WebcamGrab.cpp */; };
+		F09346AB17E351AD00A84DD4 /* PS3CamGrab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F09346A917E351AD00A84DD4 /* PS3CamGrab.cpp */; };
+		F0934D0717E380D000A84DD4 /* AGC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CDB17E380CF00A84DD4 /* AGC.m */; };
+		F0934D0817E380D000A84DD4 /* BayerConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CDC17E380CF00A84DD4 /* BayerConverter.m */; };
+		F0934D0917E380D000A84DD4 /* ControllerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CDD17E380CF00A84DD4 /* ControllerInterface.m */; };
+		F0934D0A17E380D000A84DD4 /* FrameCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CDE17E380CF00A84DD4 /* FrameCounter.m */; };
+		F0934D0B17E380D000A84DD4 /* GenericDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CDF17E380CF00A84DD4 /* GenericDriver.m */; };
+		F0934D0C17E380D000A84DD4 /* Histogram.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CE017E380CF00A84DD4 /* Histogram.m */; };
+		F0934D0D17E380D000A84DD4 /* LookUpTable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF217E380D000A84DD4 /* LookUpTable.m */; };
+		F0934D0E17E380D000A84DD4 /* MiniGraphicsTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF317E380D000A84DD4 /* MiniGraphicsTools.cpp */; };
+		F0934D0F17E380D000A84DD4 /* MiscTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF417E380D000A84DD4 /* MiscTools.cpp */; };
+		F0934D1017E380D000A84DD4 /* MyCameraCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF517E380D000A84DD4 /* MyCameraCentral.m */; };
+		F0934D1117E380D000A84DD4 /* MyCameraDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF617E380D000A84DD4 /* MyCameraDriver.m */; };
+		F0934D1217E380D000A84DD4 /* MyCameraInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF717E380D000A84DD4 /* MyCameraInfo.m */; };
+		F0934D1317E380D000A84DD4 /* OV534Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF817E380D000A84DD4 /* OV534Driver.m */; };
+		F0934D1417E380D000A84DD4 /* Resolvers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934CF917E380D000A84DD4 /* Resolvers.cpp */; };
+		F0934D1517E380D000A84DD4 /* Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CFA17E380D000A84DD4 /* Sensor.m */; };
+		F0934D1617E380D000A84DD4 /* ofxMacamPs3Eye.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0934CFC17E380D000A84DD4 /* ofxMacamPs3Eye.mm */; };
+		F0934D1717E380D000A84DD4 /* PS3EyeWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0934CFE17E380D000A84DD4 /* PS3EyeWindowAppDelegate.m */; };
 		F0D527D017E0726F008B2BF3 /* EffectUndistort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */; };
 		F0D527D317E0E16F008B2BF3 /* EffectConvert2Gray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */; };
 		F0D527D617E0FE4D008B2BF3 /* EffectsFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D527D517E0FE4D008B2BF3 /* EffectsFactory.cpp */; };
@@ -193,14 +211,11 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		F065BF9C17DB0E85000F3FA7 /* WebcamGrab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebcamGrab.cpp; sourceTree = "<group>"; };
-		F065BF9D17DB0E85000F3FA7 /* WebcamGrab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebcamGrab.h; sourceTree = "<group>"; };
 		F065BFAD17DF698B000F3FA7 /* EffectContrast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectContrast.cpp; sourceTree = "<group>"; };
 		F065BFAE17DF698B000F3FA7 /* EffectContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectContrast.h; sourceTree = "<group>"; };
 		F065BFAF17DF698B000F3FA7 /* EffectThreshold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectThreshold.cpp; sourceTree = "<group>"; };
 		F065BFB017DF698B000F3FA7 /* EffectThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectThreshold.h; sourceTree = "<group>"; };
 		F065BFB117DF698B000F3FA7 /* ImageEffectInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEffectInterface.h; sourceTree = "<group>"; };
-		F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGrabInterface.h; path = Effects/ImageGrabInterface.h; sourceTree = "<group>"; };
 		F065BFB517DF69D1000F3FA7 /* EffectsGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectsGroup.cpp; sourceTree = "<group>"; };
 		F065BFB617DF69D1000F3FA7 /* EffectsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsGroup.h; sourceTree = "<group>"; };
 		F093467D17E21CD800A84DD4 /* EffectErodeDilate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectErodeDilate.h; sourceTree = "<group>"; };
@@ -209,6 +224,46 @@
 		F093468117E224DF00A84DD4 /* EffectHistNorm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectHistNorm.cpp; sourceTree = "<group>"; };
 		F093468417E263CF00A84DD4 /* EffectBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBackground.h; sourceTree = "<group>"; };
 		F093468517E263CF00A84DD4 /* EffectBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectBackground.cpp; sourceTree = "<group>"; };
+		F09346A517E34C4200A84DD4 /* ImageGrabInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGrabInterface.h; sourceTree = "<group>"; };
+		F09346A617E34C4200A84DD4 /* WebcamGrab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebcamGrab.cpp; sourceTree = "<group>"; };
+		F09346A717E34C4200A84DD4 /* WebcamGrab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebcamGrab.h; sourceTree = "<group>"; };
+		F09346A917E351AD00A84DD4 /* PS3CamGrab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PS3CamGrab.cpp; sourceTree = "<group>"; };
+		F09346AA17E351AD00A84DD4 /* PS3CamGrab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS3CamGrab.h; sourceTree = "<group>"; };
+		F0934CDB17E380CF00A84DD4 /* AGC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGC.m; sourceTree = "<group>"; };
+		F0934CDC17E380CF00A84DD4 /* BayerConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayerConverter.m; sourceTree = "<group>"; };
+		F0934CDD17E380CF00A84DD4 /* ControllerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerInterface.m; sourceTree = "<group>"; };
+		F0934CDE17E380CF00A84DD4 /* FrameCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCounter.m; sourceTree = "<group>"; };
+		F0934CDF17E380CF00A84DD4 /* GenericDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericDriver.m; sourceTree = "<group>"; };
+		F0934CE017E380CF00A84DD4 /* Histogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Histogram.m; sourceTree = "<group>"; };
+		F0934CE217E380CF00A84DD4 /* AGC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGC.h; sourceTree = "<group>"; };
+		F0934CE317E380CF00A84DD4 /* BayerConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BayerConverter.h; sourceTree = "<group>"; };
+		F0934CE417E380CF00A84DD4 /* ControllerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerInterface.h; sourceTree = "<group>"; };
+		F0934CE517E380CF00A84DD4 /* FrameCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameCounter.h; sourceTree = "<group>"; };
+		F0934CE617E380D000A84DD4 /* GenericDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericDriver.h; sourceTree = "<group>"; };
+		F0934CE717E380D000A84DD4 /* GlobalDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefs.h; sourceTree = "<group>"; };
+		F0934CE817E380D000A84DD4 /* Histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
+		F0934CE917E380D000A84DD4 /* LookUpTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookUpTable.h; sourceTree = "<group>"; };
+		F0934CEA17E380D000A84DD4 /* MiniGraphicsTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniGraphicsTools.h; sourceTree = "<group>"; };
+		F0934CEB17E380D000A84DD4 /* MiscTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscTools.h; sourceTree = "<group>"; };
+		F0934CEC17E380D000A84DD4 /* MyCameraCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraCentral.h; sourceTree = "<group>"; };
+		F0934CED17E380D000A84DD4 /* MyCameraDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraDriver.h; sourceTree = "<group>"; };
+		F0934CEE17E380D000A84DD4 /* MyCameraInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraInfo.h; sourceTree = "<group>"; };
+		F0934CEF17E380D000A84DD4 /* OV534Driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OV534Driver.h; sourceTree = "<group>"; };
+		F0934CF017E380D000A84DD4 /* Resolvers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolvers.h; sourceTree = "<group>"; };
+		F0934CF117E380D000A84DD4 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensor.h; sourceTree = "<group>"; };
+		F0934CF217E380D000A84DD4 /* LookUpTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookUpTable.m; sourceTree = "<group>"; };
+		F0934CF317E380D000A84DD4 /* MiniGraphicsTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiniGraphicsTools.cpp; sourceTree = "<group>"; };
+		F0934CF417E380D000A84DD4 /* MiscTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiscTools.cpp; sourceTree = "<group>"; };
+		F0934CF517E380D000A84DD4 /* MyCameraCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraCentral.m; sourceTree = "<group>"; };
+		F0934CF617E380D000A84DD4 /* MyCameraDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraDriver.m; sourceTree = "<group>"; };
+		F0934CF717E380D000A84DD4 /* MyCameraInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraInfo.m; sourceTree = "<group>"; };
+		F0934CF817E380D000A84DD4 /* OV534Driver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OV534Driver.m; sourceTree = "<group>"; };
+		F0934CF917E380D000A84DD4 /* Resolvers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resolvers.cpp; sourceTree = "<group>"; };
+		F0934CFA17E380D000A84DD4 /* Sensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sensor.m; sourceTree = "<group>"; };
+		F0934CFB17E380D000A84DD4 /* ofxMacamPs3Eye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMacamPs3Eye.h; sourceTree = "<group>"; };
+		F0934CFC17E380D000A84DD4 /* ofxMacamPs3Eye.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxMacamPs3Eye.mm; sourceTree = "<group>"; };
+		F0934CFD17E380D000A84DD4 /* PS3EyeWindowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS3EyeWindowAppDelegate.h; sourceTree = "<group>"; };
+		F0934CFE17E380D000A84DD4 /* PS3EyeWindowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PS3EyeWindowAppDelegate.m; sourceTree = "<group>"; };
 		F0D527CE17E0726E008B2BF3 /* EffectUndistort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectUndistort.cpp; sourceTree = "<group>"; };
 		F0D527CF17E0726E008B2BF3 /* EffectUndistort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectUndistort.h; sourceTree = "<group>"; };
 		F0D527D117E0E16F008B2BF3 /* EffectConvert2Gray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectConvert2Gray.cpp; sourceTree = "<group>"; };
@@ -572,6 +627,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F0934C9317E380CD00A84DD4 /* ofxMacamPs3Eye */,
 				F0D527DC17E1DE9C008B2BF3 /* ofxGui */,
 				6025faf6414c2ca589764d26b59a2f04 /* ofxCv */,
 				a0b90d3b0adb9c1716816714bf7f212b /* ofxOpenCv */,
@@ -642,10 +698,9 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F09346A417E34C4200A84DD4 /* camera */,
 				F065BFAC17DF698B000F3FA7 /* Effects */,
-				F065BF9C17DB0E85000F3FA7 /* WebcamGrab.cpp */,
-				F065BFB217DF698B000F3FA7 /* ImageGrabInterface.h */,
-				F065BF9D17DB0E85000F3FA7 /* WebcamGrab.h */,
+				F09346A317E34BE900A84DD4 /* camera */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
@@ -686,6 +741,92 @@
 				F0D527D217E0E16F008B2BF3 /* EffectConvert2Gray.h */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		F09346A317E34BE900A84DD4 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = camera;
+			sourceTree = "<group>";
+		};
+		F09346A417E34C4200A84DD4 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				F09346A517E34C4200A84DD4 /* ImageGrabInterface.h */,
+				F09346A617E34C4200A84DD4 /* WebcamGrab.cpp */,
+				F09346A717E34C4200A84DD4 /* WebcamGrab.h */,
+				F09346A917E351AD00A84DD4 /* PS3CamGrab.cpp */,
+				F09346AA17E351AD00A84DD4 /* PS3CamGrab.h */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		F0934C9317E380CD00A84DD4 /* ofxMacamPs3Eye */ = {
+			isa = PBXGroup;
+			children = (
+				F0934CD917E380CF00A84DD4 /* src */,
+			);
+			name = ofxMacamPs3Eye;
+			path = ../../../addons/ofxMacamPs3Eye;
+			sourceTree = "<group>";
+		};
+		F0934CD917E380CF00A84DD4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F0934CDA17E380CF00A84DD4 /* macam */,
+				F0934CFB17E380D000A84DD4 /* ofxMacamPs3Eye.h */,
+				F0934CFC17E380D000A84DD4 /* ofxMacamPs3Eye.mm */,
+				F0934CFD17E380D000A84DD4 /* PS3EyeWindowAppDelegate.h */,
+				F0934CFE17E380D000A84DD4 /* PS3EyeWindowAppDelegate.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F0934CDA17E380CF00A84DD4 /* macam */ = {
+			isa = PBXGroup;
+			children = (
+				F0934CDB17E380CF00A84DD4 /* AGC.m */,
+				F0934CDC17E380CF00A84DD4 /* BayerConverter.m */,
+				F0934CDD17E380CF00A84DD4 /* ControllerInterface.m */,
+				F0934CDE17E380CF00A84DD4 /* FrameCounter.m */,
+				F0934CDF17E380CF00A84DD4 /* GenericDriver.m */,
+				F0934CE017E380CF00A84DD4 /* Histogram.m */,
+				F0934CE117E380CF00A84DD4 /* include */,
+				F0934CF217E380D000A84DD4 /* LookUpTable.m */,
+				F0934CF317E380D000A84DD4 /* MiniGraphicsTools.cpp */,
+				F0934CF417E380D000A84DD4 /* MiscTools.cpp */,
+				F0934CF517E380D000A84DD4 /* MyCameraCentral.m */,
+				F0934CF617E380D000A84DD4 /* MyCameraDriver.m */,
+				F0934CF717E380D000A84DD4 /* MyCameraInfo.m */,
+				F0934CF817E380D000A84DD4 /* OV534Driver.m */,
+				F0934CF917E380D000A84DD4 /* Resolvers.cpp */,
+				F0934CFA17E380D000A84DD4 /* Sensor.m */,
+			);
+			path = macam;
+			sourceTree = "<group>";
+		};
+		F0934CE117E380CF00A84DD4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F0934CE217E380CF00A84DD4 /* AGC.h */,
+				F0934CE317E380CF00A84DD4 /* BayerConverter.h */,
+				F0934CE417E380CF00A84DD4 /* ControllerInterface.h */,
+				F0934CE517E380CF00A84DD4 /* FrameCounter.h */,
+				F0934CE617E380D000A84DD4 /* GenericDriver.h */,
+				F0934CE717E380D000A84DD4 /* GlobalDefs.h */,
+				F0934CE817E380D000A84DD4 /* Histogram.h */,
+				F0934CE917E380D000A84DD4 /* LookUpTable.h */,
+				F0934CEA17E380D000A84DD4 /* MiniGraphicsTools.h */,
+				F0934CEB17E380D000A84DD4 /* MiscTools.h */,
+				F0934CEC17E380D000A84DD4 /* MyCameraCentral.h */,
+				F0934CED17E380D000A84DD4 /* MyCameraDriver.h */,
+				F0934CEE17E380D000A84DD4 /* MyCameraInfo.h */,
+				F0934CEF17E380D000A84DD4 /* OV534Driver.h */,
+				F0934CF017E380D000A84DD4 /* Resolvers.h */,
+				F0934CF117E380D000A84DD4 /* Sensor.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		F0D527DC17E1DE9C008B2BF3 /* ofxGui */ = {
@@ -947,7 +1088,6 @@
 				e212c821d1064b92dd953a42edc08aa7 /* ofxCvHaarFinder.cpp in Sources */,
 				63020f16c7e8ded9801112417e67ad38 /* ofxCvImage.cpp in Sources */,
 				d3301f6a0b43bb293ed97c1d5d26c840 /* ofxCvShortImage.cpp in Sources */,
-				F065BF9E17DB0E85000F3FA7 /* WebcamGrab.cpp in Sources */,
 				F065BFB317DF698B000F3FA7 /* EffectContrast.cpp in Sources */,
 				F065BFB417DF698B000F3FA7 /* EffectThreshold.cpp in Sources */,
 				F065BFB717DF69D1000F3FA7 /* EffectsGroup.cpp in Sources */,
@@ -965,6 +1105,25 @@
 				F093467F17E21CD900A84DD4 /* EffectErodeDilate.cpp in Sources */,
 				F093468217E224DF00A84DD4 /* EffectHistNorm.cpp in Sources */,
 				F093468617E263D000A84DD4 /* EffectBackground.cpp in Sources */,
+				F09346A817E34C4200A84DD4 /* WebcamGrab.cpp in Sources */,
+				F09346AB17E351AD00A84DD4 /* PS3CamGrab.cpp in Sources */,
+				F0934D0717E380D000A84DD4 /* AGC.m in Sources */,
+				F0934D0817E380D000A84DD4 /* BayerConverter.m in Sources */,
+				F0934D0917E380D000A84DD4 /* ControllerInterface.m in Sources */,
+				F0934D0A17E380D000A84DD4 /* FrameCounter.m in Sources */,
+				F0934D0B17E380D000A84DD4 /* GenericDriver.m in Sources */,
+				F0934D0C17E380D000A84DD4 /* Histogram.m in Sources */,
+				F0934D0D17E380D000A84DD4 /* LookUpTable.m in Sources */,
+				F0934D0E17E380D000A84DD4 /* MiniGraphicsTools.cpp in Sources */,
+				F0934D0F17E380D000A84DD4 /* MiscTools.cpp in Sources */,
+				F0934D1017E380D000A84DD4 /* MyCameraCentral.m in Sources */,
+				F0934D1117E380D000A84DD4 /* MyCameraDriver.m in Sources */,
+				F0934D1217E380D000A84DD4 /* MyCameraInfo.m in Sources */,
+				F0934D1317E380D000A84DD4 /* OV534Driver.m in Sources */,
+				F0934D1417E380D000A84DD4 /* Resolvers.cpp in Sources */,
+				F0934D1517E380D000A84DD4 /* Sensor.m in Sources */,
+				F0934D1617E380D000A84DD4 /* ofxMacamPs3Eye.mm in Sources */,
+				F0934D1717E380D000A84DD4 /* PS3EyeWindowAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,6 +1191,10 @@
 					../../../addons/ofxOpenCv/libs/opencv/lib,
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx,
 					../../../addons/ofxOpenCv/src,
+					../../../addons/ofxMacamPs3Eye/src,
+					../../../addons/ofxMacamPs3Eye/libs,
+					../../../addons/ofxMacamPs3Eye/src/macam,
+					../../../addons/ofxMacamPs3Eye/src/macam/include,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -1099,6 +1262,10 @@
 					../../../addons/ofxOpenCv/libs/opencv/lib,
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx,
 					../../../addons/ofxOpenCv/src,
+					../../../addons/ofxMacamPs3Eye/src,
+					../../../addons/ofxMacamPs3Eye/libs,
+					../../../addons/ofxMacamPs3Eye/src/macam,
+					../../../addons/ofxMacamPs3Eye/src/macam/include,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -1193,8 +1360,10 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PREBINDING = NO;
 				PRODUCT_NAME = shadowDebug;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1279,8 +1448,10 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PREBINDING = NO;
 				PRODUCT_NAME = shadow;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

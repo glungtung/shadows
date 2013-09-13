@@ -14,7 +14,7 @@ public:
     
     void createBaseEffects();
 	
-	ofVideoGrabber cam;
+	WebcamGrab cam;
 	ofImage  shadowImage;
     
     EffectsGroup effects;
