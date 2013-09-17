@@ -15,7 +15,10 @@ void testApp::setup() {
 
 //-----------------------------------------------------------------------------
 void testApp::update() {
-	cam.update();
+    if (recorder.isRecording())
+        recorder.record(shadowImage.getPixelsRef());
+	
+    cam.update();
 	if(cam.isFrameNew()) {
         shadowImage.setFromPixels(cam.getPixelsRef());
         effects.apply(shadowImage);
@@ -27,11 +30,22 @@ void testApp::update() {
 void testApp::draw() {
 	ofSetColor(255);
 	
-    cam.draw(0, 0);
+    //cam.draw(0, 0);
+
+    ofEnableBlendMode(OF_BLENDMODE_DARKEN);
+    recorder.draw();
+
     if (shadowImage.isAllocated())
         shadowImage.draw(640, 0);
     effects.draw();
 }
+
+//-----------------------------------------------------------------------------
+void testApp::keyPressed(int key) {
+    if (key==' ')
+        recorder.keyPressed(key);
+}
+
 
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------

@@ -36,6 +36,7 @@ void EffectBackground::apply(ofBaseHasPixels& source)
     {
         backgroundSettingsChanged();
 		background.update(source.getPixelsRef(), thresholded);
+        invert(thresholded);
         source.getPixelsRef() = thresholded;
     }
 }
@@ -61,7 +62,7 @@ void EffectBackground::backgroundSettingsChanged() {
 }
 
 void EffectBackground::keyPressed(ofKeyEventArgs & args) {
-	if(args.key  == ' ') {
+	if(args.key  == 'r') {
 		background.reset();
 	}
 }

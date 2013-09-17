@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../../libs/openFrameworks/events/ofEvents.cpp"
-         timestampString = "400789143.112352"
+         timestampString = "401037483.521946"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "ofSetFrameRate(int _targetRate)"
          landmarkType = "7">
       </FileBreakpoint>
@@ -37,6 +37,43 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "35"
          endingLineNumber = "35">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/testApp.cpp"
+         timestampString = "401058218.85343"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "44"
+         endingLineNumber = "44">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/AnimatedImageRecorder.h"
+         timestampString = "401045263.574592"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "33"
+         endingLineNumber = "33"
+         landmarkName = "class AnimatedImageRecorder"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
+         timestampString = "401058097.212332"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "RecorderPhotoState::record(ofPixels &amp;p)"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

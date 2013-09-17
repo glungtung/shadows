@@ -6,6 +6,7 @@
 #include "EffectsGroup.h"
 #include "EffectsFactory.h"
 #include "PS3CamGrab.h"
+#include "AnimatedImageRecorder.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -14,10 +15,14 @@ public:
 	void draw();
     
     void createBaseEffects();
+    
+    void keyPressed(int key);
 	
-	PS3CamGrab cam;
+	WebcamGrab cam;
 	ofImage  shadowImage;
     
     EffectsGroup effects;
     EffectsFactory effectsFactory;
+    
+    AnimatedImageRecorder recorder;
 };

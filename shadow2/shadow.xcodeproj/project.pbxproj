@@ -75,6 +75,9 @@
 		F0934D2617E3824B00A84DD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0934D2417E3824B00A84DD4 /* CoreVideo.framework */; };
 		F0934D2717E3824B00A84DD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0934D2517E3824B00A84DD4 /* QTKit.framework */; };
 		F0934D2B17E389D400A84DD4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0934D2A17E389D400A84DD4 /* Accelerate.framework */; };
+		F0934D3317E6479C00A84DD4 /* SingleImageRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3217E6479C00A84DD4 /* SingleImageRecorder.cpp */; };
+		F0934D3617E74C4A00A84DD4 /* AnimatedImageRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3417E74C4A00A84DD4 /* AnimatedImageRecorder.cpp */; };
+		F0934D3D17E77AB500A84DD4 /* RecorderPhotoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */; };
 		a6e663c9c7f2b67585fca31a4ca51310 /* MyCameraInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3cd03abe0301c38c40c1d15deb2f03a2 /* MyCameraInfo.m */; };
 		a977196b829a665aaf57e123c79b476a /* FrameCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274cc2883159945c01aeedcdfae3fcb /* FrameCounter.m */; };
 		adf8b0ea6a6b24734c9aa58c80d2a217 /* MiniGraphicsTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754ff232d736fa53dbcd7f06a270ff8 /* MiniGraphicsTools.cpp */; };
@@ -332,6 +335,13 @@
 		F0934D2417E3824B00A84DD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = ../../../../../../../System/Library/Frameworks/CoreVideo.framework; sourceTree = "<group>"; };
 		F0934D2517E3824B00A84DD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = ../../../../../../../System/Library/Frameworks/QTKit.framework; sourceTree = "<group>"; };
 		F0934D2A17E389D400A84DD4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		F0934D3017E6454A00A84DD4 /* ImageRecorderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageRecorderInterface.h; sourceTree = "<group>"; };
+		F0934D3117E645ED00A84DD4 /* SingleImageRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleImageRecorder.h; sourceTree = "<group>"; };
+		F0934D3217E6479C00A84DD4 /* SingleImageRecorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleImageRecorder.cpp; sourceTree = "<group>"; };
+		F0934D3417E74C4A00A84DD4 /* AnimatedImageRecorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedImageRecorder.cpp; sourceTree = "<group>"; };
+		F0934D3517E74C4A00A84DD4 /* AnimatedImageRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageRecorder.h; sourceTree = "<group>"; };
+		F0934D3A17E764D200A84DD4 /* RecorderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderState.h; sourceTree = "<group>"; };
+		F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderPhotoState.cpp; sourceTree = "<group>"; };
 		ab387c0823b100ffddbbf9d2459c7880 /* LookUpTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LookUpTable.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/LookUpTable.h; sourceTree = SOURCE_ROOT; };
 		b57e64ee6d9af5e0a16fcd1e33da8a1b /* Resolvers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Resolvers.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/Resolvers.cpp; sourceTree = SOURCE_ROOT; };
 		b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = Histogram.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/Histogram.m; sourceTree = SOURCE_ROOT; };
@@ -481,6 +491,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F0934D2F17E6452F00A84DD4 /* recorder */,
 				F093476017E37E8700A84DD4 /* Effects */,
 				F093477417E37E8700A84DD4 /* camera */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
@@ -963,6 +974,28 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		F0934D2F17E6452F00A84DD4 /* recorder */ = {
+			isa = PBXGroup;
+			children = (
+				F0934D3917E764D200A84DD4 /* RecorderState */,
+				F0934D3017E6454A00A84DD4 /* ImageRecorderInterface.h */,
+				F0934D3417E74C4A00A84DD4 /* AnimatedImageRecorder.cpp */,
+				F0934D3517E74C4A00A84DD4 /* AnimatedImageRecorder.h */,
+				F0934D3117E645ED00A84DD4 /* SingleImageRecorder.h */,
+				F0934D3217E6479C00A84DD4 /* SingleImageRecorder.cpp */,
+			);
+			path = recorder;
+			sourceTree = "<group>";
+		};
+		F0934D3917E764D200A84DD4 /* RecorderState */ = {
+			isa = PBXGroup;
+			children = (
+				F0934D3A17E764D200A84DD4 /* RecorderState.h */,
+				F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */,
+			);
+			path = RecorderState;
+			sourceTree = "<group>";
+		};
 		e5e0522c87296aa71173405060d028a5 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -1139,6 +1172,9 @@
 				F0934C2117E37EBC00A84DD4 /* ofxCvHaarFinder.cpp in Sources */,
 				F0934C2217E37EBC00A84DD4 /* ofxCvImage.cpp in Sources */,
 				F0934C2317E37EBC00A84DD4 /* ofxCvShortImage.cpp in Sources */,
+				F0934D3317E6479C00A84DD4 /* SingleImageRecorder.cpp in Sources */,
+				F0934D3617E74C4A00A84DD4 /* AnimatedImageRecorder.cpp in Sources */,
+				F0934D3D17E77AB500A84DD4 /* RecorderPhotoState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

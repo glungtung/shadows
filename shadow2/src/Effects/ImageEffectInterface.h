@@ -31,8 +31,6 @@ public:
         initGUI();
     }
     virtual void init(ImageEffectInterface *parent) {
-        std::cout << "ImageEffectWithGUI::init(parent)" << std::endl;
-
         init();
         ImageEffectWithGUI * p;
         p = (ImageEffectWithGUI *)(parent);
