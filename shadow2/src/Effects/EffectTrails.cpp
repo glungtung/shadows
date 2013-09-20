@@ -14,7 +14,7 @@ using namespace ofxCv;
 
 void EffectTrails::initGUI()
 {
-    addParameter(fadeAmnt.set("Fade",0,0,250));
+    addParameter(fadeAmnt.set("Fade",10,0,250));
 
     rgbaFboFloat.allocate(640, 480, GL_RGBA32F_ARB);
     rgbaFboFloat.begin();

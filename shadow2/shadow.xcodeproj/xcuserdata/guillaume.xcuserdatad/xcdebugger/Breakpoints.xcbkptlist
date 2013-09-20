@@ -112,5 +112,18 @@
          landmarkName = "EffectBackgroundSimple::apply(ofBaseHasPixels&amp; source)"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPalindromeState.cpp"
+         timestampString = "401361696.745501"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "RecorderPalindromeState::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

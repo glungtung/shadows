@@ -31,11 +31,11 @@ void RecorderPhotoState::clear()
     recorder->sequence.clear();
 }
 
-void RecorderPhotoState::draw(int x, int y)
+void RecorderPhotoState::draw(int x, int y, int width, int height)
 {
     for (vector<SingleImageRecorder>::iterator it = recorder->sequence.begin(); it != recorder->sequence.end(); it++)
     {
-        it->draw();
+        it->draw(x,y,width,height);
     }
 }
 

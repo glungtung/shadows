@@ -37,12 +37,12 @@ void testApp::draw() {
 
 
     ofEnableBlendMode(OF_BLENDMODE_DARKEN);
-    recorder.draw();
+    recorder.draw(0,0,ofGetWidth(),ofGetHeight());
 
     if (shadowImage.isAllocated())
-        shadowImage.draw(0, 0);
+        shadowImage.draw(0, 0, ofGetWidth(), ofGetHeight());
     
-    cam.draw(0, 0);
+    //cam.draw(0, 0);
     
     ofEnableBlendMode(OF_BLENDMODE_DISABLED);
     effects.draw();

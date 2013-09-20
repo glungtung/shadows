@@ -22,7 +22,7 @@ public:
     
     void update();
     void clear();
-    void draw(int x=0, int y=0);
+    void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
@@ -46,7 +46,7 @@ public:
     
     void update();
     void clear();
-    void draw(int x=0, int y=0);
+    void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}

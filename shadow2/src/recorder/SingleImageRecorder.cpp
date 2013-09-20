@@ -31,13 +31,16 @@ void SingleImageRecorder::clear()
     pixels.clear();
 }
 
-void SingleImageRecorder::draw(int x, int y)
+void SingleImageRecorder::draw(int x, int y, int width, int height)
 {
     if (pixels.isAllocated())
     {
+        if (width == 0) width = pixels.getWidth();
+        if (height == 0) height = pixels.getHeight();
+        
         ofTexture tex;
         tex.loadData(pixels);
-        tex.draw(x,y);
+        tex.draw(x,y,ofGetWidth(),ofGetHeight());
     }
 }
 

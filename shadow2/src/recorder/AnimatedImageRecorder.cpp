@@ -37,9 +37,9 @@ void AnimatedImageRecorder::clear()
     state->clear();
 }
 
-void AnimatedImageRecorder::draw(int x, int y)
+void AnimatedImageRecorder::draw(int x, int y, int width, int height)
 {
-    state->draw();
+    state->draw(x,y,width,height);
 }
 
 

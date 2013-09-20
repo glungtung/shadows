@@ -47,10 +47,10 @@ void RecorderPalindromeState::clear()
 }
 
 //--------------------------------------------------------------
-void RecorderPalindromeState::draw(int x, int y)
+void RecorderPalindromeState::draw(int x, int y, int width, int height)
 {
     if (!bIsRecording && readingPosition != recorder->sequence.end())
-        readingPosition->draw();
+        readingPosition->draw(x,y,width,height);
 }
 
 

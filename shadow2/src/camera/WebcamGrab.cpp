@@ -21,7 +21,7 @@ bool WebcamGrab::isFrameNew() {
 }
 
 void WebcamGrab::draw(int x, int y) {
-    //cam.draw(x, y);
+    cam.draw(x, y);
 }
 
 unsigned char * WebcamGrab::getPixels() {
