@@ -14,7 +14,10 @@
 #include "EffectErodeDilate.h"
 #include "EffectHistNorm.h"
 #include "EffectBackground.h"
-
+#include "EffectContour.h"
+#include "EffectCrop.h"
+#include "EffectBackgroundSimple.h"
+#include "EffectTrails.h"
  
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
 {
@@ -48,6 +51,24 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     else if (name == "Background") {
         EffectBackground *effect = new EffectBackground();
         effect->setName("Background");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Contour") {
+        EffectContour *effect = new EffectContour();
+        return ofPtr<ImageEffectInterface>(effect);
+    }
+    else if (name == "Crop") {
+        EffectCrop *effect = new EffectCrop();
+        effect->setName("Crop");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "BackgroundSimple") {
+        EffectBackgroundSimple *effect = new EffectBackgroundSimple();
+        return ofPtr<ImageEffectInterface>(effect);
+    }
+    else if (name == "Trails") {
+        EffectTrails *effect = new EffectTrails();
+        effect->setName("Trails");
         return ofPtr<ImageEffectWithGUI>(effect);
     }
     else return ofPtr<ImageEffectInterface>();

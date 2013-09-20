@@ -11,7 +11,6 @@
 
 #include "ImageEffectInterface.h"
 #include "ofxCv.h"
-#include "ofxButton.h"
 
 class EffectBackground : public ImageEffectWithGUI {
 public:
@@ -29,7 +28,6 @@ private:
     ofParameter<int> thresholdValue;
     ofParameter<bool> ignoreForeground;
     ofParameter<int> differenceMode;
-    ofxButton resetBackground;
     
     ofxCv::RunningBackground background;
     ofPixels thresholded;

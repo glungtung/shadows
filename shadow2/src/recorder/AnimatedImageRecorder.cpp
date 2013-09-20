@@ -12,8 +12,7 @@
 AnimatedImageRecorder::AnimatedImageRecorder()
 {
     sequence.reserve(600);
-    readingPosition = sequence.end();
-    state = ofPtr<ImageRecorderInterface>(new RecorderPhotoState(this));
+    state = ofPtr<ImageRecorderInterface>(new RecorderPalindromeState(this));
 }
 
 

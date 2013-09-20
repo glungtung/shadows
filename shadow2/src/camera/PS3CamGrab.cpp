@@ -11,6 +11,16 @@
 void PS3CamGrab::init() {
 	ps3eye.initGrabber(640, 480);
 	
+    autoGainShutter.addListener(this, &PS3CamGrab::onAutoGainAndShutterChange);
+    gain.addListener(this, &PS3CamGrab::onGainChange);
+    shutter.addListener(this, &PS3CamGrab::onShutterChange);
+    gamma.addListener(this, &PS3CamGrab::onGammaChange);
+    brightness.addListener(this, &PS3CamGrab::onBrightnessChange);
+    contrast.addListener(this, &PS3CamGrab::onContrastChange);
+    hue.addListener(this, &PS3CamGrab::onHueChange);
+    flickerType.addListener(this, &PS3CamGrab::onFlickerChange);
+    whiteBalanceMode.addListener(this, &PS3CamGrab::onWhiteBalanceChange);
+    
 	gui.setName("PS3 Eye");
     parameters.add(fps);
     parameters.add(autoGainShutter.set("Auto Gain & Shutter", false));
@@ -47,7 +57,7 @@ ofPixels & PS3CamGrab::getPixelsRef() {
 
 //--------------------------------------------------------------
 void PS3CamGrab::draw(int x, int y){
-	ps3eye.draw(0, 0);
+	//ps3eye.draw(0, 0);
 	gui.draw();
 }
 

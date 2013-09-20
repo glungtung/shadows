@@ -78,6 +78,11 @@
 		F0934D3317E6479C00A84DD4 /* SingleImageRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3217E6479C00A84DD4 /* SingleImageRecorder.cpp */; };
 		F0934D3617E74C4A00A84DD4 /* AnimatedImageRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3417E74C4A00A84DD4 /* AnimatedImageRecorder.cpp */; };
 		F0934D3D17E77AB500A84DD4 /* RecorderPhotoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */; };
+		F0966ED617E89F9500FAAF78 /* RecorderPalindromeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0966ED517E89F9500FAAF78 /* RecorderPalindromeState.cpp */; };
+		F0966EEB17EA43D200FAAF78 /* EffectContour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0966EE917EA43D200FAAF78 /* EffectContour.cpp */; };
+		F096741217EB708400FAAF78 /* EffectCrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F096741017EB708400FAAF78 /* EffectCrop.cpp */; };
+		F096741517EB7FA300FAAF78 /* EffectBackgroundSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F096741317EB7FA200FAAF78 /* EffectBackgroundSimple.cpp */; };
+		F096741817EB93AA00FAAF78 /* EffectTrails.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F096741617EB93AA00FAAF78 /* EffectTrails.cpp */; };
 		a6e663c9c7f2b67585fca31a4ca51310 /* MyCameraInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3cd03abe0301c38c40c1d15deb2f03a2 /* MyCameraInfo.m */; };
 		a977196b829a665aaf57e123c79b476a /* FrameCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274cc2883159945c01aeedcdfae3fcb /* FrameCounter.m */; };
 		adf8b0ea6a6b24734c9aa58c80d2a217 /* MiniGraphicsTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754ff232d736fa53dbcd7f06a270ff8 /* MiniGraphicsTools.cpp */; };
@@ -342,6 +347,15 @@
 		F0934D3517E74C4A00A84DD4 /* AnimatedImageRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageRecorder.h; sourceTree = "<group>"; };
 		F0934D3A17E764D200A84DD4 /* RecorderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderState.h; sourceTree = "<group>"; };
 		F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderPhotoState.cpp; sourceTree = "<group>"; };
+		F0966ED517E89F9500FAAF78 /* RecorderPalindromeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderPalindromeState.cpp; sourceTree = "<group>"; };
+		F0966EE917EA43D200FAAF78 /* EffectContour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectContour.cpp; sourceTree = "<group>"; };
+		F0966EEA17EA43D200FAAF78 /* EffectContour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectContour.h; sourceTree = "<group>"; };
+		F096741017EB708400FAAF78 /* EffectCrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectCrop.cpp; sourceTree = "<group>"; };
+		F096741117EB708400FAAF78 /* EffectCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectCrop.h; sourceTree = "<group>"; };
+		F096741317EB7FA200FAAF78 /* EffectBackgroundSimple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectBackgroundSimple.cpp; sourceTree = "<group>"; };
+		F096741417EB7FA200FAAF78 /* EffectBackgroundSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBackgroundSimple.h; sourceTree = "<group>"; };
+		F096741617EB93AA00FAAF78 /* EffectTrails.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectTrails.cpp; sourceTree = "<group>"; };
+		F096741717EB93AA00FAAF78 /* EffectTrails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectTrails.h; sourceTree = "<group>"; };
 		ab387c0823b100ffddbbf9d2459c7880 /* LookUpTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LookUpTable.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/LookUpTable.h; sourceTree = SOURCE_ROOT; };
 		b57e64ee6d9af5e0a16fcd1e33da8a1b /* Resolvers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Resolvers.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/Resolvers.cpp; sourceTree = SOURCE_ROOT; };
 		b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = Histogram.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/Histogram.m; sourceTree = SOURCE_ROOT; };
@@ -513,8 +527,12 @@
 		F093476017E37E8700A84DD4 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				F096741017EB708400FAAF78 /* EffectCrop.cpp */,
+				F096741117EB708400FAAF78 /* EffectCrop.h */,
 				F093476117E37E8700A84DD4 /* EffectBackground.cpp */,
 				F093476217E37E8700A84DD4 /* EffectBackground.h */,
+				F096741317EB7FA200FAAF78 /* EffectBackgroundSimple.cpp */,
+				F096741417EB7FA200FAAF78 /* EffectBackgroundSimple.h */,
 				F093476317E37E8700A84DD4 /* EffectContrast.cpp */,
 				F093476417E37E8700A84DD4 /* EffectContrast.h */,
 				F093476517E37E8700A84DD4 /* EffectConvert2Gray.cpp */,
@@ -523,14 +541,18 @@
 				F093476817E37E8700A84DD4 /* EffectErodeDilate.h */,
 				F093476917E37E8700A84DD4 /* EffectHistNorm.cpp */,
 				F093476A17E37E8700A84DD4 /* EffectHistNorm.h */,
-				F093476B17E37E8700A84DD4 /* EffectsFactory.cpp */,
-				F093476C17E37E8700A84DD4 /* EffectsFactory.h */,
 				F093476D17E37E8700A84DD4 /* EffectsGroup.cpp */,
 				F093476E17E37E8700A84DD4 /* EffectsGroup.h */,
 				F093476F17E37E8700A84DD4 /* EffectThreshold.cpp */,
 				F093477017E37E8700A84DD4 /* EffectThreshold.h */,
 				F093477117E37E8700A84DD4 /* EffectUndistort.cpp */,
 				F093477217E37E8700A84DD4 /* EffectUndistort.h */,
+				F0966EE917EA43D200FAAF78 /* EffectContour.cpp */,
+				F0966EEA17EA43D200FAAF78 /* EffectContour.h */,
+				F096741617EB93AA00FAAF78 /* EffectTrails.cpp */,
+				F096741717EB93AA00FAAF78 /* EffectTrails.h */,
+				F093476B17E37E8700A84DD4 /* EffectsFactory.cpp */,
+				F093476C17E37E8700A84DD4 /* EffectsFactory.h */,
 				F093477317E37E8700A84DD4 /* ImageEffectInterface.h */,
 			);
 			path = Effects;
@@ -990,6 +1012,7 @@
 		F0934D3917E764D200A84DD4 /* RecorderState */ = {
 			isa = PBXGroup;
 			children = (
+				F0966ED517E89F9500FAAF78 /* RecorderPalindromeState.cpp */,
 				F0934D3A17E764D200A84DD4 /* RecorderState.h */,
 				F0934D3B17E77AB500A84DD4 /* RecorderPhotoState.cpp */,
 			);
@@ -1175,6 +1198,11 @@
 				F0934D3317E6479C00A84DD4 /* SingleImageRecorder.cpp in Sources */,
 				F0934D3617E74C4A00A84DD4 /* AnimatedImageRecorder.cpp in Sources */,
 				F0934D3D17E77AB500A84DD4 /* RecorderPhotoState.cpp in Sources */,
+				F0966ED617E89F9500FAAF78 /* RecorderPalindromeState.cpp in Sources */,
+				F0966EEB17EA43D200FAAF78 /* EffectContour.cpp in Sources */,
+				F096741217EB708400FAAF78 /* EffectCrop.cpp in Sources */,
+				F096741517EB7FA300FAAF78 /* EffectBackgroundSimple.cpp in Sources */,
+				F096741817EB93AA00FAAF78 /* EffectTrails.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

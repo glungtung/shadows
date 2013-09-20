@@ -43,22 +43,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "401058218.85343"
+         timestampString = "401305470.356769"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44">
+         startingLineNumber = "52"
+         endingLineNumber = "52">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/AnimatedImageRecorder.h"
-         timestampString = "401045263.574592"
+         timestampString = "401126506.701732"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "class AnimatedImageRecorder"
          landmarkType = "3">
       </FileBreakpoint>
@@ -73,6 +73,43 @@
          startingLineNumber = "24"
          endingLineNumber = "24"
          landmarkName = "RecorderPhotoState::record(ofPixels &amp;p)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../addons/ofxCv/libs/ofxCv/src/ContourFinder.cpp"
+         timestampString = "401231309.991106"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "ContourFinder::findContours(Mat img)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../addons/ofxCv/libs/ofxCv/src/RunningBackground.cpp"
+         timestampString = "401309283.312193"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "67"
+         endingLineNumber = "67">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/Effects/EffectBackgroundSimple.cpp"
+         timestampString = "401311889.2075"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "EffectBackgroundSimple::apply(ofBaseHasPixels&amp; source)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

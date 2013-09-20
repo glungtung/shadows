@@ -27,7 +27,6 @@ public:
     void keyPressed(int key);
     
     bool isVisible;
-    vector<SingleImageRecorder>::iterator readingPosition;
     
     vector<SingleImageRecorder> sequence;
     ofPtr<ImageRecorderInterface> state;

@@ -12,10 +12,12 @@
 #include "ImageRecorderInterface.h"
 #include "AnimatedImageRecorder.h"
 
-/*
+class AnimatedImageRecorder;
+
+//--------------------------------------------------------------
 class RecorderPalindromeState : public ImageRecorderInterface{
 public:    
-    RecorderPalindromeState(ImageRecorderInterface &parent);
+    RecorderPalindromeState(AnimatedImageRecorder *parent);
     ~RecorderPalindromeState() {};
     
     void update();
@@ -26,12 +28,17 @@ public:
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
     
+    void switchRecording();
+    
     bool isVisible, bIsRecording;
+    AnimatedImageRecorder *recorder;
+    
+    bool bReadingBackward;
+    vector<SingleImageRecorder>::iterator readingPosition;
 
-};*/
+};
 
-class AnimatedImageRecorder;
-
+//--------------------------------------------------------------
 class RecorderPhotoState : public ImageRecorderInterface{
 public:
     RecorderPhotoState(AnimatedImageRecorder *rec);
@@ -47,6 +54,5 @@ public:
     
     bool isVisible, bIsRecording;
     AnimatedImageRecorder *recorder;
-    
 };
 #endif
