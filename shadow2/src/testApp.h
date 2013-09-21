@@ -7,6 +7,7 @@
 #include "EffectsFactory.h"
 #include "PS3CamGrab.h"
 #include "AnimatedImageRecorder.h"
+#include "ofxOsc.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -25,4 +26,7 @@ public:
     EffectsFactory effectsFactory;
     
     AnimatedImageRecorder recorder;
+    
+    ofxOscReceiver receiver;
+
 };

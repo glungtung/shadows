@@ -11,10 +11,26 @@ void testApp::setup() {
    // cam.setDesiredFrameRate(60);
     createBaseEffects();
     effects.init();
+    
+    receiver.setup(8000);
 }
 
 //-----------------------------------------------------------------------------
 void testApp::update() {
+    // check for waiting messages
+	while(receiver.hasWaitingMessages()){
+		// get the next message
+		ofxOscMessage m;
+		receiver.getNextMessage(&m);
+        string msg_string = m.getAddress();
+        float msg_arg = 0.;
+        // TODO:  deal with num of args
+        if (m.getNumArgs() == 1 && m.getArgType(0) == OFXOSC_TYPE_FLOAT)
+            msg_arg = m.getArgAsFloat(0);
+        recorder.execute(msg_string, msg_arg);
+        effects.execute(msg_string, msg_arg);
+    }
+    
     recorder.update();
     
     if (recorder.isRecording())
@@ -42,7 +58,7 @@ void testApp::draw() {
     if (shadowImage.isAllocated())
         shadowImage.draw(0, 0, ofGetWidth(), ofGetHeight());
     
-    //cam.draw(0, 0);
+    cam.draw(200, 0);
     
     ofEnableBlendMode(OF_BLENDMODE_DISABLED);
     effects.draw();
@@ -65,7 +81,7 @@ void testApp::createBaseEffects() {
 //    effects.addEffect(effectsFactory.createEffect("Background"));
     effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
     effects.addEffect(effectsFactory.createEffect("BackgroundSimple"));
-   // effects.addEffect(effectsFactory.createEffect("Crop"));
+    effects.addEffect(effectsFactory.createEffect("Crop"));
    // effects.addEffect(effectsFactory.createEffect("Equalize"));
     effects.addEffect(effectsFactory.createEffect("Threshold"));
    // effects.addEffect(effectsFactory.createEffect("ErodeDilate"));

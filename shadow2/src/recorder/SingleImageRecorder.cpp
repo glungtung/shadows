@@ -7,17 +7,23 @@
 //
 
 #include "SingleImageRecorder.h"
+#include "ofxOpenCv.h"
 
 SingleImageRecorder::SingleImageRecorder()
 {
-    isVisible = true;
-    bIsRecording = false;
+
+
 }
 
 SingleImageRecorder::SingleImageRecorder(ofPixels &p)
 {
-    SingleImageRecorder();
+    //SingleImageRecorder::SingleImageRecorder();
+    isVisible = true;
+    bIsRecording = false;
+    brightness = 255.;
+    
     record(p);
+    
 }
 
 void SingleImageRecorder::record(ofPixels &p)
@@ -35,12 +41,22 @@ void SingleImageRecorder::draw(int x, int y, int width, int height)
 {
     if (pixels.isAllocated())
     {
+
         if (width == 0) width = pixels.getWidth();
         if (height == 0) height = pixels.getHeight();
-        
-        ofTexture tex;
+            
+/*        ofTexture tex;
         tex.loadData(pixels);
-        tex.draw(x,y,ofGetWidth(),ofGetHeight());
+        tex.draw(x,y,ofGetWidth(),ofGetHeight());*/
+/*        ofImage img;
+        img.setFromPixels(pixels);
+        img.draw(x,y,ofGetWidth(),ofGetHeight());*/
+        ofxCvGrayscaleImage gray;
+        gray.allocate(pixels.getWidth(), pixels.getHeight());
+        gray.setFromPixels(pixels);
+        if (brightness != 255.)
+            gray.brightnessContrast(brightness/100., 0);
+        gray.draw(x,y,ofGetWidth(),ofGetHeight());
     }
 }
 

@@ -21,6 +21,7 @@ void EffectTrails::initGUI()
 	ofClear(255,255,255, 0);
     rgbaFboFloat.end();
     img.allocate(640,480, OF_IMAGE_GRAYSCALE);
+    isActive.set(false);
 }
 
 
@@ -50,4 +51,20 @@ void EffectTrails::draw()
 {
    // rgbaFboFloat.draw(0,0);
     
+}
+
+void EffectTrails::execute(string msg_string, float msg_arg)
+{
+    if (msg_string == "/shadow/effects/trails/switch")
+    {
+        if (msg_arg == 0.0)
+            isActive.set(false);
+        else
+            isActive.set(true);
+    }
+    
+    if (msg_string == "/shadow/effects/trails/amnt")
+    {
+        fadeAmnt.set(int(msg_arg));
+    }
 }

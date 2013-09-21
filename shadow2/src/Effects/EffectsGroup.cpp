@@ -28,6 +28,7 @@ void EffectsGroup::init()
         (*it)->init(this);
     }
     gui.setup(parameters);
+    gui.setPosition(ofGetWidth() - gui.getWidth() - 10, 10);
 }
 
 void EffectsGroup::apply(ofBaseHasPixels& source)
@@ -54,5 +55,12 @@ void EffectsGroup::addEffect(ofPtr<ImageEffectInterface> effect) {
     if (effect)
     {
         effects.push_back(effect);
+    }
+}
+
+void EffectsGroup::execute(string msg_string, float msg_arg)
+{
+    for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
+        (*it)->execute(msg_string, msg_arg);
     }
 }

@@ -9,16 +9,26 @@
 #include "AnimatedImageRecorder.h"
 
 
+
 AnimatedImageRecorder::AnimatedImageRecorder()
 {
+    stateList.resize(5);
+    stateList[RECORDER_STATE_INACTIVE] = ofPtr<ImageRecorderStateInterface>(new RecorderInactiveState(this));
+    stateList[RECORDER_STATE_PHOTO] = ofPtr<ImageRecorderStateInterface>(new RecorderPhotoState(this));
+    stateList[RECORDER_STATE_PALINDROME] = ofPtr<ImageRecorderStateInterface>(new RecorderPalindromeState(this));
+    stateList[RECORDER_STATE_MULTIX] = ofPtr<ImageRecorderStateInterface>(new RecorderMultixState(this));
+    stateList[RECORDER_STATE_STOPREC] = ofPtr<ImageRecorderStateInterface>(new RecorderStopRecState(this));
+    
+    setState(RECORDER_STATE_PHOTO);
+
     sequence.reserve(600);
-    state = ofPtr<ImageRecorderInterface>(new RecorderPalindromeState(this));
 }
 
 
 void AnimatedImageRecorder::update()
 {
     state->update();
+    
 }
 
 bool AnimatedImageRecorder::isRecording()
@@ -43,7 +53,37 @@ void AnimatedImageRecorder::draw(int x, int y, int width, int height)
 }
 
 
+void AnimatedImageRecorder::setState(int stateType)
+{
+    state.reset();
+    switch (stateType) {
+        case RECORDER_STATE_INACTIVE:
+            state = stateList[RECORDER_STATE_INACTIVE];
+            break;
+        case RECORDER_STATE_PHOTO:
+            state = stateList[RECORDER_STATE_PHOTO];
+            break;
+        case RECORDER_STATE_PALINDROME:
+            state = stateList[RECORDER_STATE_PALINDROME];
+            break;
+        case RECORDER_STATE_MULTIX:
+            state = stateList[RECORDER_STATE_MULTIX];
+            break;
+        case RECORDER_STATE_STOPREC:
+            state = stateList[RECORDER_STATE_STOPREC];
+            break;
+        default:
+            break;
+    }
+}
+
 void AnimatedImageRecorder::keyPressed(int key)
 {
     state->keyPressed(key);
+}
+
+void AnimatedImageRecorder::execute(string msg_string, float msg_arg)
+{
+    for (vector<ofPtr<ImageRecorderStateInterface> >::iterator it = stateList.begin(); it < stateList.end(); it++)
+        (*it)->execute(msg_string, msg_arg);
 }

@@ -8,8 +8,10 @@
 
 #include "RecorderState.h"
 
+
 RecorderPalindromeState::RecorderPalindromeState(AnimatedImageRecorder *rec)
 {
+    setType(RECORDER_STATE_PALINDROME);
     recorder = rec;
     isVisible = true;
     bIsRecording = false;
@@ -32,6 +34,13 @@ void RecorderPalindromeState::update()
         bReadingBackward = false;
     else if (readingPosition + 1 == recorder->sequence.end())
         bReadingBackward = true;
+    
+    
+    // limit buffer recording size
+    if (isRecording() && recorder->sequence.size() > MAX_RECORDER_BUFFER_SIZE)
+    {
+        switchRecording();
+    }
 }
 
 //--------------------------------------------------------------
@@ -78,3 +87,12 @@ void RecorderPalindromeState::keyPressed(int key)
         switchRecording();
 }
 
+//--------------------------------------------------------------
+void RecorderPalindromeState::execute(string msg_string, float msg_arg)
+{
+    if (msg_string == "/shadow/recorder/palindrome/switch" && msg_arg == 1.0)
+    {
+        recorder->setState(RECORDER_STATE_PALINDROME);
+        switchRecording();
+    }
+}

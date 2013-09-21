@@ -43,22 +43,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "401305470.356769"
+         timestampString = "401467783.251111"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52">
+         startingLineNumber = "68"
+         endingLineNumber = "68">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/AnimatedImageRecorder.h"
-         timestampString = "401126506.701732"
+         timestampString = "401467596.339883"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
          landmarkName = "class AnimatedImageRecorder"
          landmarkType = "3">
       </FileBreakpoint>
@@ -67,16 +67,16 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401058097.212332"
+         timestampString = "401478936.558688"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "24"
-         endingLineNumber = "24"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "RecorderPhotoState::record(ofPixels &amp;p)"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../../addons/ofxCv/libs/ofxCv/src/ContourFinder.cpp"
@@ -117,12 +117,136 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPalindromeState.cpp"
-         timestampString = "401361696.745501"
+         timestampString = "401467596.339883"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
          landmarkName = "RecorderPalindromeState::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPalindromeState.cpp"
+         timestampString = "401467596.339883"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPalindromeState.cpp"
+         timestampString = "401467596.339883"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "67"
+         endingLineNumber = "67">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPalindromeState.cpp"
+         timestampString = "401467596.339883"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
+         landmarkName = "RecorderPalindromeState::RecorderPalindromeState(AnimatedImageRecorder *rec)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderStopRecState.cpp"
+         timestampString = "401472343.605699"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "RecorderStopRecState::execute(string msg_string, float msg_arg)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderStopRecState.cpp"
+         timestampString = "401472343.605699"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "RecorderStopRecState::execute(string msg_string, float msg_arg)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/SingleImageRecorder.cpp"
+         timestampString = "401487964.140037"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "SingleImageRecorder::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
+         timestampString = "401480987.318398"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
+         landmarkName = "RecorderPhotoState::clear()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
+         timestampString = "401480999.258126"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../libs/openFrameworks/gl/ofFbo.cpp"
+         timestampString = "401481381.983293"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "311"
+         endingLineNumber = "311">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
+         timestampString = "401482705.979183"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
+         landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

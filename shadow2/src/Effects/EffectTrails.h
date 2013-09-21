@@ -19,7 +19,9 @@ public:
     void initGUI();
     
     void draw();
-        
+    
+    void execute(string msg_string, float msg_arg);
+
 private:
     //32 bits red, 32 bits green, 32 bits blue, from 0 to 1 in 'infinite' steps
     ofFbo rgbaFboFloat; // with alpha

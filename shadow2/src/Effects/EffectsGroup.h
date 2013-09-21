@@ -24,6 +24,9 @@ public:
     
     void draw();
     
+    void execute(string msg_string, float msg_arg);
+
+    
 private:
     vector< ofPtr <ImageEffectInterface> > effects;
     ofxPanel gui;

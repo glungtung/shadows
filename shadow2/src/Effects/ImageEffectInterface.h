@@ -21,6 +21,7 @@ public:
     virtual void draw() {};
     virtual void exit() {};
     virtual void apply(ofBaseHasPixels& source) = 0;
+    virtual void execute(string msg_string, float msg_arg) {};
 };
 
 class ImageEffectWithGUI : public ImageEffectInterface {
@@ -39,6 +40,8 @@ public:
     virtual void draw() {};
     virtual void initGUI() {};
 //    inline virtual void setActive(bool b) { isActive = b; }
+    
+    virtual void execute(string msg_string, float msg_arg) {};
     
     inline void addParameter(ofAbstractParameter & param) { parameters.add(param); }
     inline void setName(string name) {parameters.setName(name);}

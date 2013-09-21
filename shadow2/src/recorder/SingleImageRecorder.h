@@ -24,13 +24,16 @@ public:
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
-    
+    void execute(string msg_string, float msg_arg) {};
+
     bool isVisible, bIsRecording;
     
     unsigned char * getPixels();
     ofPixels & getPixelsRef();
     
     ofPixels pixels;
+    
+    int brightness;
 };
 
 #endif

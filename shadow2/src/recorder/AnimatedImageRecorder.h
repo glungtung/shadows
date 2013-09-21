@@ -13,6 +13,11 @@
 #include "SingleImageRecorder.h"
 #include "RecorderState/RecorderState.h"
 
+#define MAX_RECORDER_BUFFER_SIZE 2000
+
+
+class ImageRecorderStateInterface;
+
 class AnimatedImageRecorder : public ImageRecorderInterface {
 public:
     AnimatedImageRecorder();
@@ -25,11 +30,14 @@ public:
     void record(ofPixels &pixels) ;
     inline void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
+    void execute(string msg_string, float msg_arg);
+    void setState(int stateType);
     
     bool isVisible;
     
     vector<SingleImageRecorder> sequence;
-    ofPtr<ImageRecorderInterface> state;
+    ofPtr<ImageRecorderStateInterface> state;
+    vector<ofPtr<ImageRecorderStateInterface> > stateList;
 };
 
 #endif

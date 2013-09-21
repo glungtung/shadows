@@ -19,6 +19,7 @@ public:
     virtual bool isRecording() = 0;
     virtual void record(ofPixels &pixels) = 0;
     virtual void keyPressed(int key) = 0;
+    virtual void execute(string msg_string, float msg_arg) = 0;
     
 };
 
