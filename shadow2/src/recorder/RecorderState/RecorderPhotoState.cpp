@@ -39,9 +39,14 @@ void RecorderPhotoState::clear()
 
 void RecorderPhotoState::draw(int x, int y, int width, int height)
 {
-    for (vector<SingleImageRecorder>::iterator it = recorder->sequence.begin(); it != recorder->sequence.end(); it++)
+    vector<SingleImageRecorder>::iterator it = recorder->sequence.begin();
+    vector<unsigned long long>::iterator it_time = timestamps.begin();
+    for (; it != recorder->sequence.end(); it++)
     {
+        if (ofGetElapsedTimeMillis() > *it_time + 2000 && it->brightness >= 0)
+            it->brightness--;
         it->draw(x,y,width,height);
+        it_time++;
     }
 }
 

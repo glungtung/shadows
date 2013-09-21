@@ -217,11 +217,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401480999.258126"
+         timestampString = "401496518.199777"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -241,11 +241,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401482705.979183"
+         timestampString = "401496518.199777"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
          landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
          landmarkType = "5">
       </FileBreakpoint>

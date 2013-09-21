@@ -55,7 +55,7 @@ void SingleImageRecorder::draw(int x, int y, int width, int height)
         gray.allocate(pixels.getWidth(), pixels.getHeight());
         gray.setFromPixels(pixels);
         if (brightness != 255.)
-            gray.brightnessContrast(brightness/100., 0);
+            gray.brightnessContrast((255-brightness)/100., 0);
         gray.draw(x,y,ofGetWidth(),ofGetHeight());
     }
 }
