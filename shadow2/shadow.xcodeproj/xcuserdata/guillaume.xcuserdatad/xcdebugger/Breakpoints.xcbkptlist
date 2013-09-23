@@ -43,11 +43,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "401467783.251111"
+         timestampString = "401625816.947907"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68">
+         startingLineNumber = "85"
+         endingLineNumber = "85">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -165,11 +165,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderStopRecState.cpp"
-         timestampString = "401472343.605699"
+         timestampString = "401551066.475166"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
          landmarkName = "RecorderStopRecState::execute(string msg_string, float msg_arg)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -178,11 +178,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderStopRecState.cpp"
-         timestampString = "401472343.605699"
+         timestampString = "401551066.475166"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
          landmarkName = "RecorderStopRecState::execute(string msg_string, float msg_arg)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -217,7 +217,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401496518.199777"
+         timestampString = "401536875.184342"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "44"
@@ -241,12 +241,129 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401496518.199777"
+         timestampString = "401558220.629708"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "56"
+         endingLineNumber = "56"
          landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderStopRecState.cpp"
+         timestampString = "401551379.005784"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "RecorderStopRecState::update()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerPostProcessing.cpp"
+         timestampString = "401625816.947907"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "drawerPostProcessing::execute(string msg_string, float msg_arg)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/RecorderState/RecorderPingPongState.cpp"
+         timestampString = "401622947.633674"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "RecorderPingPongState::update()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerPostProcessing.cpp"
+         timestampString = "401625816.947907"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
+         landmarkName = "drawerPostProcessing::execute(string msg_string, float msg_arg)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerPostProcessing.cpp"
+         timestampString = "401624731.530955"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "drawerPostProcessing::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerManager.cpp"
+         timestampString = "401624169.042877"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "DrawerManager::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerManager.cpp"
+         timestampString = "401624201.811331"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "DrawerManager::draw(int x, int y, int width, int height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/drawer/DrawerPostProcessing.cpp"
+         timestampString = "401624771.259889"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "drawerPostProcessing::init()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../addons/ofxPostProcessing/src/PostProcessing.cpp"
+         timestampString = "401624851.077509"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "PostProcessing::init(unsigned width, unsigned height)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

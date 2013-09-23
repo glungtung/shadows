@@ -19,6 +19,7 @@ class AnimatedImageRecorder;
 #define RECORDER_STATE_PALINDROME 2
 #define RECORDER_STATE_MULTIX 3
 #define RECORDER_STATE_STOPREC 4
+#define RECORDER_STATE_PINGPONG 5
 
 //--------------------------------------------------------------
 class ImageRecorderStateInterface : public ImageRecorderInterface{
@@ -156,4 +157,34 @@ public:
     int type;
 };
 
+//--------------------------------------------------------------
+class RecorderPingPongState : public ImageRecorderStateInterface{
+public:
+    RecorderPingPongState(AnimatedImageRecorder *parent);
+    ~RecorderPingPongState() {};
+    
+    void update();
+    void clear();
+    void draw(int x=0, int y=0, int width=0, int height=0);
+    inline bool isRecording() {return bIsRecording;};
+    void record(ofPixels &pixels);
+    void setVisible(bool b) {isVisible = b;}
+    void keyPressed(int key);
+    void execute(string msg_string, float msg_arg);
+    
+    void switchRecording();
+    
+    bool isVisible, bIsRecording;
+    AnimatedImageRecorder *recorder;
+    
+    bool bReadingBackward;
+    vector<SingleImageRecorder>::iterator readingPosition, pingPosition, pongPosition;
+
+    int type;
+    
+    ofxPanel gui;
+    ofParameterGroup parameters;
+    ofParameter<int> speed;
+    int steps;
+};
 #endif

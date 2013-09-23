@@ -24,6 +24,10 @@ void RecorderStopRecState::update()
 {
     if (!recorder->sequence.empty() && bIsPlaying && readingPosition != recorder->sequence.end())
         readingPosition++;
+    if (readingPosition == recorder->sequence.end())
+        clear();
+    if (isRecording() && recorder->sequence.size() >= MAX_RECORDER_BUFFER_SIZE)
+        switchRecording();
 }
 
 //--------------------------------------------------------------
@@ -82,6 +86,9 @@ void RecorderStopRecState::execute(string msg_string, float msg_arg)
         {
             recorder->setState(RECORDER_STATE_STOPREC);
             clear();
+            bIsRecording = false;
+            bIsPlaying = false;
+            readingPosition = recorder->sequence.end();
         }
         switchRecording();
     }

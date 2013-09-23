@@ -8,6 +8,7 @@
 #include "PS3CamGrab.h"
 #include "AnimatedImageRecorder.h"
 #include "ofxOsc.h"
+#include "drawer/DrawerManager.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -28,5 +29,7 @@ public:
     AnimatedImageRecorder recorder;
     
     ofxOscReceiver receiver;
+    
+    DrawerManager drawer;
 
 };

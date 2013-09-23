@@ -20,7 +20,7 @@ SingleImageRecorder::SingleImageRecorder(ofPixels &p)
     //SingleImageRecorder::SingleImageRecorder();
     isVisible = true;
     bIsRecording = false;
-    brightness = 255.;
+    brightness = 0;
     
     record(p);
     
@@ -54,8 +54,8 @@ void SingleImageRecorder::draw(int x, int y, int width, int height)
         ofxCvGrayscaleImage gray;
         gray.allocate(pixels.getWidth(), pixels.getHeight());
         gray.setFromPixels(pixels);
-        if (brightness != 255.)
-            gray.brightnessContrast((255-brightness)/100., 0);
+        if (brightness != 0)
+            gray.brightnessContrast(brightness/100., 0);
         gray.draw(x,y,ofGetWidth(),ofGetHeight());
     }
 }

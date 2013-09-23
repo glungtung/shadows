@@ -11,12 +11,17 @@
 using namespace cv;
 using namespace ofxCv;
 
+void EffectConvert2Gray::init()
+{
+    pix.allocate(640,480, 1);
+    
+}
+
 
 void EffectConvert2Gray::apply(ofBaseHasPixels& source)
 {
     if (source.getPixelsRef().getImageType() != OF_IMAGE_GRAYSCALE)
     {
-        ofPixels pix;
         convertColor(source.getPixelsRef(), pix, CV_RGB2GRAY);
         source.getPixelsRef() = pix; // DANGER ??
     }

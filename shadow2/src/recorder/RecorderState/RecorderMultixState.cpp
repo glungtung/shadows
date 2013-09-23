@@ -15,8 +15,8 @@ RecorderMultixState::RecorderMultixState(AnimatedImageRecorder *rec)
     isVisible = true;
     bIsRecording = false;
     
-    parameters.add(nb.set("number",1,0,50));
-    parameters.add(offset.set("offset",10,1,150));
+    parameters.add(nb.set("number",2,2,15));
+    parameters.add(offset.set("offset",1,1,100));
     gui.setup(parameters);
 
 }
@@ -28,6 +28,8 @@ void RecorderMultixState::update()
     {
         recorder->sequence.erase(recorder->sequence.begin(), recorder->sequence.begin() + nb*offset);
     }
+    if (isRecording() && recorder->sequence.size() == MAX_RECORDER_BUFFER_SIZE)
+        switchRecording();
 }
 
 //--------------------------------------------------------------

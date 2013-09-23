@@ -12,16 +12,17 @@
 
 AnimatedImageRecorder::AnimatedImageRecorder()
 {
-    stateList.resize(5);
+    stateList.resize(6);
     stateList[RECORDER_STATE_INACTIVE] = ofPtr<ImageRecorderStateInterface>(new RecorderInactiveState(this));
     stateList[RECORDER_STATE_PHOTO] = ofPtr<ImageRecorderStateInterface>(new RecorderPhotoState(this));
     stateList[RECORDER_STATE_PALINDROME] = ofPtr<ImageRecorderStateInterface>(new RecorderPalindromeState(this));
     stateList[RECORDER_STATE_MULTIX] = ofPtr<ImageRecorderStateInterface>(new RecorderMultixState(this));
     stateList[RECORDER_STATE_STOPREC] = ofPtr<ImageRecorderStateInterface>(new RecorderStopRecState(this));
-    
-    setState(RECORDER_STATE_PHOTO);
+    stateList[RECORDER_STATE_PINGPONG] = ofPtr<ImageRecorderStateInterface>(new RecorderPingPongState(this));
 
-    sequence.reserve(600);
+    setState(RECORDER_STATE_PINGPONG);
+
+    sequence.reserve(MAX_RECORDER_BUFFER_SIZE+10);
 }
 
 
@@ -56,25 +57,7 @@ void AnimatedImageRecorder::draw(int x, int y, int width, int height)
 void AnimatedImageRecorder::setState(int stateType)
 {
     state.reset();
-    switch (stateType) {
-        case RECORDER_STATE_INACTIVE:
-            state = stateList[RECORDER_STATE_INACTIVE];
-            break;
-        case RECORDER_STATE_PHOTO:
-            state = stateList[RECORDER_STATE_PHOTO];
-            break;
-        case RECORDER_STATE_PALINDROME:
-            state = stateList[RECORDER_STATE_PALINDROME];
-            break;
-        case RECORDER_STATE_MULTIX:
-            state = stateList[RECORDER_STATE_MULTIX];
-            break;
-        case RECORDER_STATE_STOPREC:
-            state = stateList[RECORDER_STATE_STOPREC];
-            break;
-        default:
-            break;
-    }
+    state = stateList[stateType];
 }
 
 void AnimatedImageRecorder::keyPressed(int key)

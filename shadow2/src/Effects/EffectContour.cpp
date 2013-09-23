@@ -50,7 +50,7 @@ void EffectContour::draw()
 
         //    float largeur = contourFinder.getBoundingRect(0).width*2;
         //    float hauteur = largeur * wings.height / wings.width;
-        wings.draw(contourFinder.getCentroid(0).x, contourFinder.getCentroid(0).y);
+   //     wings.draw(contourFinder.getCentroid(0).x, contourFinder.getCentroid(0).y);
     }
     
 

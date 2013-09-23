@@ -15,7 +15,7 @@ RecorderPhotoState::RecorderPhotoState(AnimatedImageRecorder *rec)
     isVisible = true;
     bIsRecording = false;
     
-    parameters.add(duration.set("duration",1000,1,10000));
+    parameters.add(duration.set("duration",1000,1000,60000));
     gui.setup(parameters);
 }
 
@@ -41,13 +41,25 @@ void RecorderPhotoState::draw(int x, int y, int width, int height)
 {
     vector<SingleImageRecorder>::iterator it = recorder->sequence.begin();
     vector<unsigned long long>::iterator it_time = timestamps.begin();
-    for (; it != recorder->sequence.end(); it++)
+    int bright;
+    while ( it != recorder->sequence.end() )
     {
-        if (ofGetElapsedTimeMillis() > *it_time + 2000 && it->brightness >= 0)
-            it->brightness--;
-        it->draw(x,y,width,height);
-        it_time++;
+        bright = (ofGetElapsedTimeMillis() - *it_time) * 255 / duration;
+        if (bright > 255)
+        {
+            recorder->sequence.erase(it);
+            timestamps.erase(it_time);
+        }
+        else
+        {
+            it->brightness = bright;
+            it->draw(x,y,width,height);
+            it_time++;
+            it++;
+        }
     }
+    
+    gui.draw();
 }
 
 void RecorderPhotoState::keyPressed(int key)
@@ -67,5 +79,9 @@ void RecorderPhotoState::execute(string msg_string, float msg_arg)
             clear();
         }
         bIsRecording = true;
+    }
+    if (msg_string == "/shadow/recorder/photo/duration")
+    {
+        duration.set(int(msg_arg));
     }
 }

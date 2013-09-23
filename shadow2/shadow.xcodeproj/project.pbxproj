@@ -33,6 +33,22 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		F0929F1F17EF17BB009FD2CD /* BloomPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F0617EF17BB009FD2CD /* BloomPass.cpp */; };
+		F0929F2017EF17BB009FD2CD /* ConvolutionPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F0817EF17BB009FD2CD /* ConvolutionPass.cpp */; };
+		F0929F2117EF17BB009FD2CD /* DofAltPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F0A17EF17BB009FD2CD /* DofAltPass.cpp */; };
+		F0929F2217EF17BB009FD2CD /* DofPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F0C17EF17BB009FD2CD /* DofPass.cpp */; };
+		F0929F2317EF17BB009FD2CD /* EdgePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F0E17EF17BB009FD2CD /* EdgePass.cpp */; };
+		F0929F2417EF17BB009FD2CD /* FxaaPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1017EF17BB009FD2CD /* FxaaPass.cpp */; };
+		F0929F2517EF17BB009FD2CD /* KaleidoscopePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1217EF17BB009FD2CD /* KaleidoscopePass.cpp */; };
+		F0929F2617EF17BB009FD2CD /* NoiseWarpPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1417EF17BB009FD2CD /* NoiseWarpPass.cpp */; };
+		F0929F2717EF17BB009FD2CD /* PixelatePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1717EF17BB009FD2CD /* PixelatePass.cpp */; };
+		F0929F2817EF17BB009FD2CD /* PostProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1917EF17BB009FD2CD /* PostProcessing.cpp */; };
+		F0929F2917EF17BB009FD2CD /* RenderPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F1B17EF17BB009FD2CD /* RenderPass.cpp */; };
+		F0929F2F17EF30BC009FD2CD /* EffectMirror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F2D17EF30BC009FD2CD /* EffectMirror.cpp */; };
+		F0929F3117EF3D5A009FD2CD /* RecorderPingPongState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F3017EF3D5A009FD2CD /* RecorderPingPongState.cpp */; };
+		F0929F3617EF592E009FD2CD /* DrawerPostProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F3417EF592E009FD2CD /* DrawerPostProcessing.cpp */; };
+		F0929F3817EF6CB7009FD2CD /* DrawerBasic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F3717EF6CB7009FD2CD /* DrawerBasic.cpp */; };
+		F0929F3B17EF6E25009FD2CD /* DrawerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0929F3917EF6E25009FD2CD /* DrawerManager.cpp */; };
 		F093477C17E37E8700A84DD4 /* EffectBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093476117E37E8700A84DD4 /* EffectBackground.cpp */; };
 		F093477D17E37E8700A84DD4 /* EffectContrast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093476317E37E8700A84DD4 /* EffectContrast.cpp */; };
 		F093477E17E37E8700A84DD4 /* EffectConvert2Gray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F093476517E37E8700A84DD4 /* EffectConvert2Gray.cpp */; };
@@ -182,6 +198,36 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		F0929F0617EF17BB009FD2CD /* BloomPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BloomPass.cpp; sourceTree = "<group>"; };
+		F0929F0717EF17BB009FD2CD /* BloomPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloomPass.h; sourceTree = "<group>"; };
+		F0929F0817EF17BB009FD2CD /* ConvolutionPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConvolutionPass.cpp; sourceTree = "<group>"; };
+		F0929F0917EF17BB009FD2CD /* ConvolutionPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvolutionPass.h; sourceTree = "<group>"; };
+		F0929F0A17EF17BB009FD2CD /* DofAltPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DofAltPass.cpp; sourceTree = "<group>"; };
+		F0929F0B17EF17BB009FD2CD /* DofAltPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DofAltPass.h; sourceTree = "<group>"; };
+		F0929F0C17EF17BB009FD2CD /* DofPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DofPass.cpp; sourceTree = "<group>"; };
+		F0929F0D17EF17BB009FD2CD /* DofPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DofPass.h; sourceTree = "<group>"; };
+		F0929F0E17EF17BB009FD2CD /* EdgePass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdgePass.cpp; sourceTree = "<group>"; };
+		F0929F0F17EF17BB009FD2CD /* EdgePass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgePass.h; sourceTree = "<group>"; };
+		F0929F1017EF17BB009FD2CD /* FxaaPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FxaaPass.cpp; sourceTree = "<group>"; };
+		F0929F1117EF17BB009FD2CD /* FxaaPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxaaPass.h; sourceTree = "<group>"; };
+		F0929F1217EF17BB009FD2CD /* KaleidoscopePass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KaleidoscopePass.cpp; sourceTree = "<group>"; };
+		F0929F1317EF17BB009FD2CD /* KaleidoscopePass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaleidoscopePass.h; sourceTree = "<group>"; };
+		F0929F1417EF17BB009FD2CD /* NoiseWarpPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NoiseWarpPass.cpp; sourceTree = "<group>"; };
+		F0929F1517EF17BB009FD2CD /* NoiseWarpPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoiseWarpPass.h; sourceTree = "<group>"; };
+		F0929F1617EF17BB009FD2CD /* ofxPostProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPostProcessing.h; sourceTree = "<group>"; };
+		F0929F1717EF17BB009FD2CD /* PixelatePass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PixelatePass.cpp; sourceTree = "<group>"; };
+		F0929F1817EF17BB009FD2CD /* PixelatePass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelatePass.h; sourceTree = "<group>"; };
+		F0929F1917EF17BB009FD2CD /* PostProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PostProcessing.cpp; sourceTree = "<group>"; };
+		F0929F1A17EF17BB009FD2CD /* PostProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostProcessing.h; sourceTree = "<group>"; };
+		F0929F1B17EF17BB009FD2CD /* RenderPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderPass.cpp; sourceTree = "<group>"; };
+		F0929F1C17EF17BB009FD2CD /* RenderPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderPass.h; sourceTree = "<group>"; };
+		F0929F2D17EF30BC009FD2CD /* EffectMirror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectMirror.cpp; sourceTree = "<group>"; };
+		F0929F2E17EF30BC009FD2CD /* EffectMirror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectMirror.h; sourceTree = "<group>"; };
+		F0929F3017EF3D5A009FD2CD /* RecorderPingPongState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderPingPongState.cpp; sourceTree = "<group>"; };
+		F0929F3417EF592E009FD2CD /* DrawerPostProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawerPostProcessing.cpp; sourceTree = "<group>"; };
+		F0929F3717EF6CB7009FD2CD /* DrawerBasic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawerBasic.cpp; sourceTree = "<group>"; };
+		F0929F3917EF6E25009FD2CD /* DrawerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawerManager.cpp; sourceTree = "<group>"; };
+		F0929F3A17EF6E25009FD2CD /* DrawerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerManager.h; sourceTree = "<group>"; };
 		F093476117E37E8700A84DD4 /* EffectBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectBackground.cpp; sourceTree = "<group>"; };
 		F093476217E37E8700A84DD4 /* EffectBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBackground.h; sourceTree = "<group>"; };
 		F093476317E37E8700A84DD4 /* EffectContrast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectContrast.cpp; sourceTree = "<group>"; };
@@ -406,6 +452,7 @@
 		F09674D617EDA6F100FAAF78 /* ofxOscSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOscSender.h; sourceTree = "<group>"; };
 		F0D2E3B317EDEFA8000EB84D /* RecorderStopRecState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderStopRecState.cpp; sourceTree = "<group>"; };
 		F0D2E3B517EDF000000EB84D /* RecorderInactiveState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecorderInactiveState.cpp; sourceTree = "<group>"; };
+		F0D2E3B817EF02B5000EB84D /* DrawerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerInterface.h; sourceTree = "<group>"; };
 		ab387c0823b100ffddbbf9d2459c7880 /* LookUpTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LookUpTable.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/LookUpTable.h; sourceTree = SOURCE_ROOT; };
 		b57e64ee6d9af5e0a16fcd1e33da8a1b /* Resolvers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Resolvers.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/Resolvers.cpp; sourceTree = SOURCE_ROOT; };
 		b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = Histogram.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/Histogram.m; sourceTree = SOURCE_ROOT; };
@@ -484,6 +531,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F0929EF517EF17BB009FD2CD /* ofxPostProcessing */,
 				F09674AC17EDA6F000FAAF78 /* ofxOsc */,
 				F093478717E37EB300A84DD4 /* ofxCv */,
 				F0934A1517E37EBB00A84DD4 /* ofxGui */,
@@ -556,6 +604,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F0D2E3B717EF02B4000EB84D /* drawer */,
 				F0934D2F17E6452F00A84DD4 /* recorder */,
 				F093476017E37E8700A84DD4 /* Effects */,
 				F093477417E37E8700A84DD4 /* camera */,
@@ -575,9 +624,50 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
+		F0929EF517EF17BB009FD2CD /* ofxPostProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				F0929F0517EF17BB009FD2CD /* src */,
+			);
+			name = ofxPostProcessing;
+			path = ../../../addons/ofxPostProcessing;
+			sourceTree = "<group>";
+		};
+		F0929F0517EF17BB009FD2CD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F0929F0617EF17BB009FD2CD /* BloomPass.cpp */,
+				F0929F0717EF17BB009FD2CD /* BloomPass.h */,
+				F0929F0817EF17BB009FD2CD /* ConvolutionPass.cpp */,
+				F0929F0917EF17BB009FD2CD /* ConvolutionPass.h */,
+				F0929F0A17EF17BB009FD2CD /* DofAltPass.cpp */,
+				F0929F0B17EF17BB009FD2CD /* DofAltPass.h */,
+				F0929F0C17EF17BB009FD2CD /* DofPass.cpp */,
+				F0929F0D17EF17BB009FD2CD /* DofPass.h */,
+				F0929F0E17EF17BB009FD2CD /* EdgePass.cpp */,
+				F0929F0F17EF17BB009FD2CD /* EdgePass.h */,
+				F0929F1017EF17BB009FD2CD /* FxaaPass.cpp */,
+				F0929F1117EF17BB009FD2CD /* FxaaPass.h */,
+				F0929F1217EF17BB009FD2CD /* KaleidoscopePass.cpp */,
+				F0929F1317EF17BB009FD2CD /* KaleidoscopePass.h */,
+				F0929F1417EF17BB009FD2CD /* NoiseWarpPass.cpp */,
+				F0929F1517EF17BB009FD2CD /* NoiseWarpPass.h */,
+				F0929F1617EF17BB009FD2CD /* ofxPostProcessing.h */,
+				F0929F1717EF17BB009FD2CD /* PixelatePass.cpp */,
+				F0929F1817EF17BB009FD2CD /* PixelatePass.h */,
+				F0929F1917EF17BB009FD2CD /* PostProcessing.cpp */,
+				F0929F1A17EF17BB009FD2CD /* PostProcessing.h */,
+				F0929F1B17EF17BB009FD2CD /* RenderPass.cpp */,
+				F0929F1C17EF17BB009FD2CD /* RenderPass.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		F093476017E37E8700A84DD4 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				F0929F2D17EF30BC009FD2CD /* EffectMirror.cpp */,
+				F0929F2E17EF30BC009FD2CD /* EffectMirror.h */,
 				F096741017EB708400FAAF78 /* EffectCrop.cpp */,
 				F096741117EB708400FAAF78 /* EffectCrop.h */,
 				F093476117E37E8700A84DD4 /* EffectBackground.cpp */,
@@ -1063,6 +1153,7 @@
 		F0934D3917E764D200A84DD4 /* RecorderState */ = {
 			isa = PBXGroup;
 			children = (
+				F0929F3017EF3D5A009FD2CD /* RecorderPingPongState.cpp */,
 				F0D2E3B517EDF000000EB84D /* RecorderInactiveState.cpp */,
 				F0D2E3B317EDEFA8000EB84D /* RecorderStopRecState.cpp */,
 				F096746D17EC9D2A00FAAF78 /* RecorderMultixState.cpp */,
@@ -1167,6 +1258,18 @@
 				F09674D617EDA6F100FAAF78 /* ofxOscSender.h */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		F0D2E3B717EF02B4000EB84D /* drawer */ = {
+			isa = PBXGroup;
+			children = (
+				F0929F3717EF6CB7009FD2CD /* DrawerBasic.cpp */,
+				F0D2E3B817EF02B5000EB84D /* DrawerInterface.h */,
+				F0929F3417EF592E009FD2CD /* DrawerPostProcessing.cpp */,
+				F0929F3917EF6E25009FD2CD /* DrawerManager.cpp */,
+				F0929F3A17EF6E25009FD2CD /* DrawerManager.h */,
+			);
+			path = drawer;
 			sourceTree = "<group>";
 		};
 		e5e0522c87296aa71173405060d028a5 /* src */ = {
@@ -1368,6 +1471,22 @@
 				F09674E417EDA6F100FAAF78 /* ofxOscSender.cpp in Sources */,
 				F0D2E3B417EDEFA9000EB84D /* RecorderStopRecState.cpp in Sources */,
 				F0D2E3B617EDF000000EB84D /* RecorderInactiveState.cpp in Sources */,
+				F0929F1F17EF17BB009FD2CD /* BloomPass.cpp in Sources */,
+				F0929F2017EF17BB009FD2CD /* ConvolutionPass.cpp in Sources */,
+				F0929F2117EF17BB009FD2CD /* DofAltPass.cpp in Sources */,
+				F0929F2217EF17BB009FD2CD /* DofPass.cpp in Sources */,
+				F0929F2317EF17BB009FD2CD /* EdgePass.cpp in Sources */,
+				F0929F2417EF17BB009FD2CD /* FxaaPass.cpp in Sources */,
+				F0929F2517EF17BB009FD2CD /* KaleidoscopePass.cpp in Sources */,
+				F0929F2617EF17BB009FD2CD /* NoiseWarpPass.cpp in Sources */,
+				F0929F2717EF17BB009FD2CD /* PixelatePass.cpp in Sources */,
+				F0929F2817EF17BB009FD2CD /* PostProcessing.cpp in Sources */,
+				F0929F2917EF17BB009FD2CD /* RenderPass.cpp in Sources */,
+				F0929F2F17EF30BC009FD2CD /* EffectMirror.cpp in Sources */,
+				F0929F3117EF3D5A009FD2CD /* RecorderPingPongState.cpp in Sources */,
+				F0929F3617EF592E009FD2CD /* DrawerPostProcessing.cpp in Sources */,
+				F0929F3817EF6CB7009FD2CD /* DrawerBasic.cpp in Sources */,
+				F0929F3B17EF6E25009FD2CD /* DrawerManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

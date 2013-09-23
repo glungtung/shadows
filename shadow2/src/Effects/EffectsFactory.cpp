@@ -18,6 +18,7 @@
 #include "EffectCrop.h"
 #include "EffectBackgroundSimple.h"
 #include "EffectTrails.h"
+#include "EffectMirror.h"
  
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
 {
@@ -69,6 +70,11 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     else if (name == "Trails") {
         EffectTrails *effect = new EffectTrails();
         effect->setName("Trails");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Mirror") {
+        EffectMirror *effect = new EffectMirror();
+        effect->setName("Mirror");
         return ofPtr<ImageEffectWithGUI>(effect);
     }
     else return ofPtr<ImageEffectInterface>();

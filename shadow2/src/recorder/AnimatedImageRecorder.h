@@ -13,7 +13,7 @@
 #include "SingleImageRecorder.h"
 #include "RecorderState/RecorderState.h"
 
-#define MAX_RECORDER_BUFFER_SIZE 2000
+#define MAX_RECORDER_BUFFER_SIZE 3000
 
 
 class ImageRecorderStateInterface;

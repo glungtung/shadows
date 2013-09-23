@@ -92,7 +92,15 @@ void RecorderPalindromeState::execute(string msg_string, float msg_arg)
 {
     if (msg_string == "/shadow/recorder/palindrome/switch" && msg_arg == 1.0)
     {
-        recorder->setState(RECORDER_STATE_PALINDROME);
+        if (recorder->state->getType() != RECORDER_STATE_PALINDROME)
+        {
+            recorder->setState(RECORDER_STATE_PALINDROME);
+            isVisible = true;
+            bIsRecording = false;
+            bReadingBackward = true;
+            readingPosition = recorder->sequence.end();
+        }
+        
         switchRecording();
     }
 }
