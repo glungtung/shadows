@@ -16,6 +16,7 @@ RecorderPhotoState::RecorderPhotoState(AnimatedImageRecorder *rec)
     bIsRecording = false;
     
     parameters.add(duration.set("duration",1000,1000,60000));
+    parameters.add(fade.set("doFade",false));
     gui.setup(parameters);
 }
 
@@ -44,22 +45,31 @@ void RecorderPhotoState::draw(int x, int y, int width, int height)
     int bright;
     while ( it != recorder->sequence.end() )
     {
-        bright = (ofGetElapsedTimeMillis() - *it_time) * 255 / duration;
-        if (bright > 255)
+        if (fade)
         {
-            recorder->sequence.erase(it);
-            timestamps.erase(it_time);
+            bright = (ofGetElapsedTimeMillis() - *it_time) * 255 / duration;
+            if (bright > 255)
+            {
+                recorder->sequence.erase(it);
+                timestamps.erase(it_time);
+            }
+            else
+            {
+                it->brightness = bright;
+                it->draw(x,y,width,height);
+                it_time++;
+                it++;
+            }
         }
         else
         {
-            it->brightness = bright;
             it->draw(x,y,width,height);
-            it_time++;
             it++;
         }
     }
     
-    gui.draw();
+    if (recorder->isGUIVisible)
+        gui.draw();
 }
 
 void RecorderPhotoState::keyPressed(int key)
@@ -83,5 +93,9 @@ void RecorderPhotoState::execute(string msg_string, float msg_arg)
     if (msg_string == "/shadow/recorder/photo/duration")
     {
         duration.set(int(msg_arg));
+    }
+    if (msg_string == "/shadow/recorder/photo/fade")
+    {
+        fade.set((msg_arg == 1.0)?true:false);
     }
 }

@@ -11,16 +11,19 @@
 
 #include "ImageEffectInterface.h"
 #include "ofxCv.h"
+#include "ofxOpenCv.h"
 
-class EffectUndistort : public ImageEffectInterface {
+class EffectUndistort : public ImageEffectWithGUI {
 public:
     ~EffectUndistort() {};
-    void init();
+    void initGUI();
+
     void apply(ofBaseHasPixels& source);
     
 private:
     ofxCv::Calibration calibration;
-
+	ofParameter<float> radialX, radialY;
+    ofxCvGrayscaleImage undistorted;
 };
 
 

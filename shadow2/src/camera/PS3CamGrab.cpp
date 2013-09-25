@@ -34,6 +34,7 @@ void PS3CamGrab::init() {
     parameters.add(whiteBalanceMode.set("White Balance Mode", 4, 1, 4));
 
     gui.setup(parameters);
+    isGUIVisible = true;
 }
 
 void PS3CamGrab::update() {
@@ -58,7 +59,8 @@ ofPixels & PS3CamGrab::getPixelsRef() {
 //--------------------------------------------------------------
 void PS3CamGrab::draw(int x, int y){
 	//ps3eye.draw(0, 0);
-	gui.draw();
+    if (isGUIVisible)
+        gui.draw();
 }
 
 //--------------------------------------------------------------

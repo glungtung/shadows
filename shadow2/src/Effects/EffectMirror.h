@@ -18,6 +18,8 @@ public:
     void init();
     void apply(ofBaseHasPixels& source);
     
+    void execute(string msg_string, float msg_arg);
+
     ofxCvGrayscaleImage mirror;
     ofParameter<bool> flipVertical, flipHorizontal;
 

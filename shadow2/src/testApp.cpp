@@ -16,6 +16,8 @@ void testApp::setup() {
     
     drawer.init();
     drawer.setDrawer(DRAWER_POST);
+    
+    isGUIVisible = true;
 }
 
 //-----------------------------------------------------------------------------
@@ -65,17 +67,21 @@ void testApp::draw() {
 
 
 
+    ofEnableBlendMode(OF_BLENDMODE_DARKEN);
     if (shadowImage.isAllocated())
         drawer.draw(0, 0, ofGetWidth(), ofGetHeight());
-        //shadowImage.draw(0, 0, ofGetWidth(), ofGetHeight());
+    //shadowImage.draw(0, 0, ofGetWidth(), ofGetHeight());
 
     ofEnableBlendMode(OF_BLENDMODE_DARKEN);
     recorder.draw(0,0,ofGetWidth(),ofGetHeight());
+
+
     
-    cam.draw(200, 0);
-    
-    ofEnableBlendMode(OF_BLENDMODE_DISABLED);
-    effects.draw();
+    if (isGUIVisible)
+    {
+        cam.draw(200, 0);
+        effects.draw();
+    }
 
 //	ofDrawBitmapString("FPS "+ofToString(cam.ps3eye.getRealFrameRate()), 20, 100);
 //    ofDrawBitmapString("FPS "+ofToString(ofToString((int)ofGetFrameRate()) + "fps"), 20, 120);
@@ -90,6 +96,11 @@ void testApp::keyPressed(int key) {
         ofToggleFullscreen();
         drawer.getDrawer()->init();
     }
+    else if (key == 'h')
+    {
+        isGUIVisible = !isGUIVisible;
+        recorder.isGUIVisible = false;
+    }
 }
 
 
@@ -97,9 +108,9 @@ void testApp::keyPressed(int key) {
 //-----------------------------------------------------------------------------
 void testApp::createBaseEffects() {
     effects.setName("Cam Effect Group");
-    //effects.addEffect(effectsFactory.createEffect("Undistort"));
 //    effects.addEffect(effectsFactory.createEffect("Background"));
     effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
+    effects.addEffect(effectsFactory.createEffect("Undistort"));
 //    effects.addEffect(effectsFactory.createEffect("BackgroundSimple"));
     effects.addEffect(effectsFactory.createEffect("Crop"));
 //    effects.addEffect(effectsFactory.createEffect("Equalize"));
@@ -107,6 +118,8 @@ void testApp::createBaseEffects() {
 //    effects.addEffect(effectsFactory.createEffect("ErodeDilate"));
 //    effects.addEffect(effectsFactory.createEffect("Contour"));
     effects.addEffect(effectsFactory.createEffect("Trails"));
+    effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
+
     effects.addEffect(effectsFactory.createEffect("Mirror"));
     effects.addEffect(effectsFactory.createEffect(""));
 }

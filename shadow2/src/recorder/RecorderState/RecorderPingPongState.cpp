@@ -78,7 +78,8 @@ void RecorderPingPongState::draw(int x, int y, int width, int height)
     if (bIsRecording && readingPosition < recorder->sequence.end())
         readingPosition->draw(x,y,width,height);
 
-    gui.draw();
+    if (recorder->isGUIVisible)
+        gui.draw();
 }
 
 
@@ -122,5 +123,9 @@ void RecorderPingPongState::execute(string msg_string, float msg_arg)
         }
         
         switchRecording();
+    }
+    if (msg_string == "/shadow/recorder/pingpong/speed")
+    {
+        speed.set(int(msg_arg));
     }
 }

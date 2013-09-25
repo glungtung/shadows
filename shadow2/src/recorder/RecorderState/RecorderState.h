@@ -55,6 +55,7 @@ public:
     ofxPanel gui;
     ofParameterGroup parameters;
     ofParameter<int> duration;
+    ofParameter<bool> fade;
 };
 
 

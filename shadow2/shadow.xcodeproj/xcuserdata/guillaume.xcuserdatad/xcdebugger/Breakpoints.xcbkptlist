@@ -43,11 +43,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "401625816.947907"
+         timestampString = "401737180.407834"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85">
+         startingLineNumber = "91"
+         endingLineNumber = "91">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -67,11 +67,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401478936.558688"
+         timestampString = "401650131.265129"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
          landmarkName = "RecorderPhotoState::record(ofPixels &amp;p)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -191,11 +191,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/SingleImageRecorder.cpp"
-         timestampString = "401487964.140037"
+         timestampString = "401737583.427459"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "SingleImageRecorder::draw(int x, int y, int width, int height)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -204,11 +204,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401480987.318398"
+         timestampString = "401650131.265129"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "RecorderPhotoState::clear()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -217,11 +217,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401536875.184342"
+         timestampString = "401650131.265129"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
          landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -235,19 +235,6 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "311"
          endingLineNumber = "311">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "src/recorder/RecorderState/RecorderPhotoState.cpp"
-         timestampString = "401558220.629708"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
-         landmarkName = "RecorderPhotoState::draw(int x, int y, int width, int height)"
-         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -364,6 +351,19 @@
          startingLineNumber = "40"
          endingLineNumber = "40"
          landmarkName = "PostProcessing::init(unsigned width, unsigned height)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/recorder/SingleImageRecorder.cpp"
+         timestampString = "401737583.427459"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "SingleImageRecorder::execute(string msg_string, float msg_arg)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

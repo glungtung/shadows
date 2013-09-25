@@ -33,7 +33,7 @@ public:
     void execute(string msg_string, float msg_arg);
     void setState(int stateType);
     
-    bool isVisible;
+    bool isVisible, isGUIVisible;
     
     vector<SingleImageRecorder> sequence;
     ofPtr<ImageRecorderStateInterface> state;

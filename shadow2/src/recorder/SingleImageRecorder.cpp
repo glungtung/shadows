@@ -22,6 +22,7 @@ SingleImageRecorder::SingleImageRecorder(ofPixels &p)
     bIsRecording = false;
     brightness = 0;
     
+    pixels.allocate(p.getWidth(), p.getHeight(), 1);
     record(p);
     
 }
@@ -72,4 +73,10 @@ unsigned char * SingleImageRecorder::getPixels() {
 
 ofPixels & SingleImageRecorder::getPixelsRef() {
     return pixels;
+}
+
+void SingleImageRecorder::execute(string msg_string, float msg_arg)
+{
+    if (msg_string == "/shadow/recorder/globalFade")
+        brightness = int(msg_arg);
 }

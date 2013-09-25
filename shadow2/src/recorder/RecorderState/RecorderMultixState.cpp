@@ -63,7 +63,8 @@ void RecorderMultixState::draw(int x, int y, int width, int height)
                 step++;
         }
     }
-    gui.draw();
+    if (recorder->isGUIVisible)
+        gui.draw();
 }
 
 

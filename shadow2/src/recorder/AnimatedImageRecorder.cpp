@@ -23,6 +23,8 @@ AnimatedImageRecorder::AnimatedImageRecorder()
     setState(RECORDER_STATE_PINGPONG);
 
     sequence.reserve(MAX_RECORDER_BUFFER_SIZE+10);
+    
+    isGUIVisible = true;
 }
 
 
@@ -69,4 +71,11 @@ void AnimatedImageRecorder::execute(string msg_string, float msg_arg)
 {
     for (vector<ofPtr<ImageRecorderStateInterface> >::iterator it = stateList.begin(); it < stateList.end(); it++)
         (*it)->execute(msg_string, msg_arg);
+    
+    if (msg_string == "/shadow/recorder/globalFade")
+    {
+        vector<SingleImageRecorder>::iterator it = sequence.begin();
+        for ( ; it != sequence.end(); it++ )
+            it->execute(msg_string, msg_arg);
+    }
 }

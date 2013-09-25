@@ -20,7 +20,7 @@ public:
     
     void keyPressed(int key);
 	
-	WebcamGrab cam;
+	PS3CamGrab cam;
 	ofImage  shadowImage;
     
     EffectsGroup effects;
@@ -32,4 +32,5 @@ public:
     
     DrawerManager drawer;
 
+    bool isGUIVisible;
 };

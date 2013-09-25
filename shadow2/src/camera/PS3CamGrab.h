@@ -52,6 +52,7 @@ public:
     ofParameter<int> flickerType;
     ofParameter<int> whiteBalanceMode;
     ofParameter<string> fps;
-    
+  
+    bool isGUIVisible;
 };
 #endif

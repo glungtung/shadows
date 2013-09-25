@@ -27,3 +27,16 @@ void EffectMirror::apply(ofBaseHasPixels& source)
     }
 }
 
+//--------------------------------------------------------------
+void EffectMirror::execute(string msg_string, float msg_arg)
+{
+
+    if (msg_string == "/shadow/effect/mirror/horizontal")
+    {
+        flipHorizontal.set((msg_arg == 1.0)?true:false);
+    }
+    if (msg_string == "/shadow/effect/mirror/vertical")
+    {
+        flipVertical.set((msg_arg == 1.0)?true:false);
+    }
+}
