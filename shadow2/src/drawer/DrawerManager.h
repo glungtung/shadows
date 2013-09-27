@@ -13,6 +13,7 @@
 
 #define DRAWER_BASIC 0
 #define DRAWER_POST 1
+#define DRAWER_WINGS 2
 
 class drawerInterface;
 

@@ -1,0 +1,25 @@
+<Cam_Effect_Group>
+	<Active>1</Active>
+	<UnknownName>50fps</UnknownName>
+	<group>
+		<Active>1</Active>
+		<RadialX>-0.0260204</RadialX>
+		<RadialY>0</RadialY>
+	</group>
+	<Crop>
+		<Active>1</Active>
+		<x>0</x>
+		<y>0</y>
+		<width>640</width>
+		<height>480</height>
+	</Crop>
+	<Trails>
+		<Active>0</Active>
+		<Fade>2</Fade>
+	</Trails>
+	<Mirror>
+		<vertical>0</vertical>
+		<horizontal>0</horizontal>
+	</Mirror>
+<Cam_Effect_Group/>
+</Cam_Effect_Group>

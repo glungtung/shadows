@@ -9,6 +9,7 @@
 #include "AnimatedImageRecorder.h"
 #include "ofxOsc.h"
 #include "drawer/DrawerManager.h"
+//#include "launchMusic.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -19,9 +20,11 @@ public:
     void createBaseEffects();
     
     void keyPressed(int key);
+    
 	
 	PS3CamGrab cam;
-	ofImage  shadowImage;
+	//WebcamGrab cam;
+    ofImage  shadowImage;
     
     EffectsGroup effects;
     EffectsFactory effectsFactory;
@@ -33,4 +36,7 @@ public:
     DrawerManager drawer;
 
     bool isGUIVisible;
+
+//    launchMusic musicPlayer;
+    
 };

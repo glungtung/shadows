@@ -20,7 +20,7 @@ AnimatedImageRecorder::AnimatedImageRecorder()
     stateList[RECORDER_STATE_STOPREC] = ofPtr<ImageRecorderStateInterface>(new RecorderStopRecState(this));
     stateList[RECORDER_STATE_PINGPONG] = ofPtr<ImageRecorderStateInterface>(new RecorderPingPongState(this));
 
-    setState(RECORDER_STATE_PINGPONG);
+    setState(RECORDER_STATE_INACTIVE);
 
     sequence.reserve(MAX_RECORDER_BUFFER_SIZE+10);
     
@@ -37,6 +37,11 @@ void AnimatedImageRecorder::update()
 bool AnimatedImageRecorder::isRecording()
 {
     return state->isRecording();
+}
+
+void AnimatedImageRecorder::setRecording(bool b)
+{
+    state->setRecording(b);
 }
 
 
@@ -58,6 +63,11 @@ void AnimatedImageRecorder::draw(int x, int y, int width, int height)
 
 void AnimatedImageRecorder::setState(int stateType)
 {
+    if (state && state->getType() == stateType)
+        return;
+    
+    if (state)
+        state->setRecording(false);
     state.reset();
     state = stateList[stateType];
 }

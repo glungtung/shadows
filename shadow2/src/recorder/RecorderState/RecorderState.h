@@ -40,6 +40,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
+    inline void setRecording(bool b) {bIsRecording = b;}
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
@@ -52,10 +53,14 @@ public:
     
     vector<unsigned long long> timestamps;
     
+    void onDurationChange(int & value);
     ofxPanel gui;
     ofParameterGroup parameters;
     ofParameter<int> duration;
     ofParameter<bool> fade;
+    
+    //ofSoundPlayer shutter;
+
 };
 
 
@@ -69,6 +74,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
+    inline void setRecording(bool b) {bIsRecording = b;}
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
@@ -76,13 +82,18 @@ public:
 
     void switchRecording();
     
-    bool isVisible, bIsRecording;
+    bool isVisible;
+    ofParameter<bool> bIsRecording;
+    void onRecChange(bool & value);
+
     AnimatedImageRecorder *recorder;
     
     bool bReadingBackward;
     vector<SingleImageRecorder>::iterator readingPosition;
     
     int type;
+    
+    
 };
 
 //--------------------------------------------------------------
@@ -95,6 +106,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
+    inline void setRecording(bool b) {bIsRecording = b;}
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
@@ -102,9 +114,14 @@ public:
 
     void switchRecording();
     
-    bool isVisible, bIsRecording;
+    bool isVisible;
+    ofParameter<bool> bIsRecording;
+    void onRecChange(bool & value);
+
     AnimatedImageRecorder *recorder;
-    
+
+    void onNbChange(int & value);
+    void onOffsetChange(int & value);
 
     ofxPanel gui;
     ofParameterGroup parameters;
@@ -124,6 +141,7 @@ public:
     void clear() {};
     void draw(int x=0, int y=0, int width=0, int height=0) {};
     inline bool isRecording() {return false;}
+    inline void setRecording(bool b) {}
     void record(ofPixels &pixels) {};
     void setVisible(bool b) {};
     void keyPressed(int key) {};
@@ -143,6 +161,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
+    inline void setRecording(bool b) {bIsRecording = b;}
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
@@ -150,7 +169,9 @@ public:
     
     void switchRecording();
     
-    bool isVisible, bIsRecording, bIsPlaying;
+    bool isVisible, bIsPlaying;
+    ofParameter<bool> bIsRecording;
+
     AnimatedImageRecorder *recorder;
     
     vector<SingleImageRecorder>::iterator readingPosition;
@@ -168,6 +189,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     inline bool isRecording() {return bIsRecording;};
+    inline void setRecording(bool b) {bIsRecording = b;}
     void record(ofPixels &pixels);
     void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);
@@ -175,7 +197,10 @@ public:
     
     void switchRecording();
     
-    bool isVisible, bIsRecording;
+    bool isVisible;
+    ofParameter<bool> bIsRecording;
+    void onRecChange(bool & value);
+
     AnimatedImageRecorder *recorder;
     
     bool bReadingBackward;

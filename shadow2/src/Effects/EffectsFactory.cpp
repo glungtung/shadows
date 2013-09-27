@@ -19,6 +19,7 @@
 #include "EffectBackgroundSimple.h"
 #include "EffectTrails.h"
 #include "EffectMirror.h"
+#include "EffectVignette.h"
  
 ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
 {
@@ -75,6 +76,11 @@ ofPtr<ImageEffectInterface>  EffectsFactory::createEffect(string name)
     else if (name == "Mirror") {
         EffectMirror *effect = new EffectMirror();
         effect->setName("Mirror");
+        return ofPtr<ImageEffectWithGUI>(effect);
+    }
+    else if (name == "Vignette") {
+        EffectVignette *effect = new EffectVignette();
+        effect->setName("Vignette");
         return ofPtr<ImageEffectWithGUI>(effect);
     }
     else return ofPtr<ImageEffectInterface>();

@@ -12,6 +12,8 @@
 #include "ofMain.h"
 #include "ofxPostProcessing.h"
 #include "DrawerManager.h"
+#include "ofxCv.h"
+
 
 class DrawerManager;
 
@@ -58,6 +60,24 @@ public:
         
     ofTexture tex;
     DrawerManager *manager;
+
+};
+
+class drawerWings : public drawerInterface
+{
+public:
+    drawerWings(DrawerManager *m)  {manager = m;}
+    ~drawerWings() {};
+    
+    void init() {};
+    void update(ofBaseHasPixels& source);
+    void draw(int x=0, int y=0, int width=0, int height=0);
+    void keyPressed(int key) {};
+    void execute(string msg_string, float msg_arg) {};
+    
+    ofTexture tex;
+    DrawerManager *manager;
+    ofxCv::ContourFinder contourFinder;
 
 };
 #endif

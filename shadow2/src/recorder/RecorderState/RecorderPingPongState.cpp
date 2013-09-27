@@ -7,6 +7,7 @@
 //
 
 #include "RecorderState.h"
+#include "OscGUISender.h"
 
 #define MAXSPEED 100
 
@@ -20,6 +21,8 @@ RecorderPingPongState::RecorderPingPongState(AnimatedImageRecorder *rec)
     readingPosition = recorder->sequence.end();
     steps = 0;
     
+    bIsRecording.addListener(this, &RecorderPingPongState::onRecChange);
+
     parameters.add(speed.set("speed",5,5,MAXSPEED));
     gui.setup(parameters);
 }
@@ -100,6 +103,7 @@ void RecorderPingPongState::switchRecording()
         bIsRecording = false;
         readingPosition = recorder->sequence.end();
     }
+
 }
 
 //--------------------------------------------------------------
@@ -112,7 +116,7 @@ void RecorderPingPongState::keyPressed(int key)
 //--------------------------------------------------------------
 void RecorderPingPongState::execute(string msg_string, float msg_arg)
 {
-    if (msg_string == "/shadow/recorder/pingpong/switch" && msg_arg == 1.0)
+    if (msg_string == "/shadow/recorder/pingpong/switch")
     {
         if (recorder->state->getType() != RECORDER_STATE_PINGPONG)
         {
@@ -128,4 +132,11 @@ void RecorderPingPongState::execute(string msg_string, float msg_arg)
     {
         speed.set(int(msg_arg));
     }
+}
+
+//--------------------------------------------------------------
+void RecorderPingPongState::onRecChange(bool &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/shadow/recorder/pingpong/switch", ofToString(bIsRecording));
 }

@@ -29,6 +29,8 @@ private:
     //ofFloatPixels pixf;
 	ofParameter<int> fadeAmnt;
 
+    ofPixels pix;
+
 };
 
 

@@ -7,6 +7,7 @@
 //
 
 #include "RecorderState.h"
+#include "OscGUISender.h"
 
 RecorderPhotoState::RecorderPhotoState(AnimatedImageRecorder *rec)
 {
@@ -15,9 +16,13 @@ RecorderPhotoState::RecorderPhotoState(AnimatedImageRecorder *rec)
     isVisible = true;
     bIsRecording = false;
     
+    duration.addListener(this, &RecorderPhotoState::onDurationChange);
     parameters.add(duration.set("duration",1000,1000,60000));
     parameters.add(fade.set("doFade",false));
     gui.setup(parameters);
+    
+   // shutter.setMultiPlay(false);
+  //  shutter.setVolume(0.1f);
 }
 
 void RecorderPhotoState::update()
@@ -30,6 +35,9 @@ void RecorderPhotoState::record(ofPixels &p)
     recorder->sequence.push_back(SingleImageRecorder(p));
     timestamps.push_back(ofGetElapsedTimeMillis());
     bIsRecording = false;
+    
+//    shutter.loadSound("shutter.wav", true);
+//    shutter.play();
 }
 
 void RecorderPhotoState::clear()
@@ -98,4 +106,12 @@ void RecorderPhotoState::execute(string msg_string, float msg_arg)
     {
         fade.set((msg_arg == 1.0)?true:false);
     }
+}
+
+
+//--------------------------------------------------------------
+void RecorderPhotoState::onDurationChange(int &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/1/photoSpeed", ofToString(value));
 }

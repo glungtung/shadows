@@ -10,9 +10,10 @@
 
 void DrawerManager::init()
 {
-    drawers.resize(2);
+    drawers.resize(3);
     drawers[DRAWER_BASIC] = new drawerBasic(this);
     drawers[DRAWER_POST] = new drawerPostProcessing(this);
+    drawers[DRAWER_WINGS] = new drawerWings(this);
     
     for (vector<drawerInterface *>::iterator it = drawers.begin(); it < drawers.end(); it++)
         (*it)->init();

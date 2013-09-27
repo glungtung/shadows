@@ -23,6 +23,9 @@ void EffectTrails::initGUI()
     rgbaFboFloat.end();
     img.allocate(640,480, OF_IMAGE_GRAYSCALE);
     isActive.set(false);
+    
+    pix.allocate(640,480, 1);
+
 }
 
 
@@ -46,6 +49,12 @@ void EffectTrails::apply(ofBaseHasPixels& source)
         //rgbaFboFloat.readToPixels(pixf);
         //source.getPixelsRef() = pixf;
         rgbaFboFloat.readToPixels(source.getPixelsRef());
+        
+        if (source.getPixelsRef().getImageType() != OF_IMAGE_GRAYSCALE)
+        {
+            convertColor(source.getPixelsRef(), pix, CV_RGB2GRAY);
+            source.getPixelsRef() = pix; 
+        }
     }
 }
 

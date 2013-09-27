@@ -7,6 +7,7 @@
 //
 
 #include "RecorderState.h"
+#include "OscGUISender.h"
 
 
 RecorderPalindromeState::RecorderPalindromeState(AnimatedImageRecorder *rec)
@@ -17,6 +18,9 @@ RecorderPalindromeState::RecorderPalindromeState(AnimatedImageRecorder *rec)
     bIsRecording = false;
     bReadingBackward = true;
     readingPosition = recorder->sequence.end();
+    
+    bIsRecording.addListener(this, &RecorderPalindromeState::onRecChange);
+
 }
 
 //--------------------------------------------------------------
@@ -78,6 +82,7 @@ void RecorderPalindromeState::switchRecording()
         bIsRecording = false;
         readingPosition = recorder->sequence.end() - 1;
     }
+
 }
 
 //--------------------------------------------------------------
@@ -90,7 +95,7 @@ void RecorderPalindromeState::keyPressed(int key)
 //--------------------------------------------------------------
 void RecorderPalindromeState::execute(string msg_string, float msg_arg)
 {
-    if (msg_string == "/shadow/recorder/palindrome/switch" && msg_arg == 1.0)
+    if (msg_string == "/shadow/recorder/palindrome/switch")
     {
         if (recorder->state->getType() != RECORDER_STATE_PALINDROME)
         {
@@ -103,4 +108,11 @@ void RecorderPalindromeState::execute(string msg_string, float msg_arg)
         
         switchRecording();
     }
+}
+
+//--------------------------------------------------------------
+void RecorderPalindromeState::onRecChange(bool &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/shadow/recorder/palindrome/switch", ofToString(bIsRecording));
 }

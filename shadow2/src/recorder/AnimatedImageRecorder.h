@@ -27,6 +27,7 @@ public:
     void clear();
     void draw(int x=0, int y=0, int width=0, int height=0);
     bool isRecording();
+    void setRecording(bool b);
     void record(ofPixels &pixels) ;
     inline void setVisible(bool b) {isVisible = b;}
     void keyPressed(int key);

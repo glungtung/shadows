@@ -22,8 +22,9 @@ void PS3CamGrab::init() {
     whiteBalanceMode.addListener(this, &PS3CamGrab::onWhiteBalanceChange);
     
 	gui.setName("PS3 Eye");
+    parameters.setName("param");
     parameters.add(fps);
-    parameters.add(autoGainShutter.set("Auto Gain & Shutter", false));
+    parameters.add(autoGainShutter.set("Auto Gain Shutter", false));
     parameters.add(gain.set("Gain", 0.5, 0.0, 1.0));
     parameters.add(shutter.set("Shutter", 0.5, 0.0, 1.0));
     parameters.add(gamma.set("Gamma", 0.5, 0.0, 1.0));
@@ -33,7 +34,8 @@ void PS3CamGrab::init() {
     parameters.add(flickerType.set("Flicker Type", 0, 0, 2));
     parameters.add(whiteBalanceMode.set("White Balance Mode", 4, 1, 4));
 
-    gui.setup(parameters);
+    gui.setup(parameters, "pseye.xml", 10, 100);
+    gui.loadFromFile("pseye.xml");
     isGUIVisible = true;
 }
 
@@ -59,6 +61,7 @@ ofPixels & PS3CamGrab::getPixelsRef() {
 //--------------------------------------------------------------
 void PS3CamGrab::draw(int x, int y){
 	//ps3eye.draw(0, 0);
+
     if (isGUIVisible)
         gui.draw();
 }

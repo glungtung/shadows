@@ -17,6 +17,7 @@ public:
     virtual void clear() = 0;
     virtual void draw(int x=0, int y=0, int width=0, int height=0) = 0;
     virtual bool isRecording() = 0;
+    virtual void setRecording(bool b) = 0;
     virtual void record(ofPixels &pixels) = 0;
     virtual void keyPressed(int key) = 0;
     virtual void execute(string msg_string, float msg_arg) = 0;

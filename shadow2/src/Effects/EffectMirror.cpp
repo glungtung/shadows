@@ -19,7 +19,7 @@ void EffectMirror::init()
 
 void EffectMirror::apply(ofBaseHasPixels& source)
 {
-    if (source.getPixelsRef().getImageType() == OF_IMAGE_GRAYSCALE)
+    if (source.getPixelsRef().getImageType() == OF_IMAGE_GRAYSCALE && (flipVertical || flipHorizontal))
     {
         mirror.setFromPixels(source.getPixelsRef());
         mirror.mirror(flipVertical, flipHorizontal);

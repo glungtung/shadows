@@ -27,7 +27,8 @@ void EffectsGroup::init()
     for(vector<ofPtr <ImageEffectInterface> >::iterator it = effects.begin(); it != effects.end(); it++) {
         (*it)->init(this);
     }
-    gui.setup(parameters);
+    gui.setup(parameters, "effects.xml");
+    gui.loadFromFile("effects.xml");
     gui.setPosition(ofGetWidth() - gui.getWidth() - 10, 10);
 }
 

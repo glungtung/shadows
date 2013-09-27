@@ -5,10 +5,11 @@ using namespace cv;
 
 //-----------------------------------------------------------------------------
 void testApp::setup() {
-	ofSetVerticalSync(true);
-	//cam.initGrabber(640, 480);
+	ofSetVerticalSync(true);    
+    //cam.initGrabber(640, 480);
     cam.init();
-   // cam.setDesiredFrameRate(60);
+    // cam.setDesiredFrameRate(60);
+    
     createBaseEffects();
     effects.init();
     
@@ -18,12 +19,20 @@ void testApp::setup() {
     drawer.setDrawer(DRAWER_POST);
     
     isGUIVisible = true;
+    
+ //   musicPlayer.init();
+
 }
 
 //-----------------------------------------------------------------------------
 void testApp::update() {
+    // update the sound playing system:
+
+	//ofSoundUpdate();
+    
     // check for waiting messages
 	while(receiver.hasWaitingMessages()){
+
 		// get the next message
 		ofxOscMessage m;
 		receiver.getNextMessage(&m);
@@ -35,6 +44,7 @@ void testApp::update() {
         recorder.execute(msg_string, msg_arg);
         effects.execute(msg_string, msg_arg);
         drawer.execute(msg_string, msg_arg);
+   //     musicPlayer.execute(msg_string, msg_arg);
 
     }
     
@@ -112,14 +122,15 @@ void testApp::createBaseEffects() {
     effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
     effects.addEffect(effectsFactory.createEffect("Undistort"));
 //    effects.addEffect(effectsFactory.createEffect("BackgroundSimple"));
-    effects.addEffect(effectsFactory.createEffect("Crop"));
+//    effects.addEffect(effectsFactory.createEffect("Crop"));
 //    effects.addEffect(effectsFactory.createEffect("Equalize"));
 //    effects.addEffect(effectsFactory.createEffect("Threshold"));
 //    effects.addEffect(effectsFactory.createEffect("ErodeDilate"));
 //    effects.addEffect(effectsFactory.createEffect("Contour"));
     effects.addEffect(effectsFactory.createEffect("Trails"));
-    effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
+ //   effects.addEffect(effectsFactory.createEffect("ConvertToGray"));
 
     effects.addEffect(effectsFactory.createEffect("Mirror"));
-    effects.addEffect(effectsFactory.createEffect(""));
+    effects.addEffect(effectsFactory.createEffect("Vignette"));
+ //   effects.addEffect(effectsFactory.createEffect(""));
 }

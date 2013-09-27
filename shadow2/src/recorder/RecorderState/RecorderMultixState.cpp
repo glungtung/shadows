@@ -7,6 +7,7 @@
 //
 
 #include "RecorderState.h"
+#include "OscGUISender.h"
 
 RecorderMultixState::RecorderMultixState(AnimatedImageRecorder *rec)
 {
@@ -15,6 +16,9 @@ RecorderMultixState::RecorderMultixState(AnimatedImageRecorder *rec)
     isVisible = true;
     bIsRecording = false;
     
+    bIsRecording.addListener(this, &RecorderMultixState::onRecChange);
+    nb.addListener(this, &RecorderMultixState::onNbChange);
+    offset.addListener(this, &RecorderMultixState::onOffsetChange);
     parameters.add(nb.set("number",2,2,15));
     parameters.add(offset.set("offset",1,1,100));
     gui.setup(parameters);
@@ -80,6 +84,8 @@ void RecorderMultixState::switchRecording()
     {
         bIsRecording = false;
     }
+    
+
 }
 
 //--------------------------------------------------------------
@@ -92,7 +98,7 @@ void RecorderMultixState::keyPressed(int key)
 //--------------------------------------------------------------
 void RecorderMultixState::execute(string msg_string, float msg_arg)
 {
-    if (msg_string == "/shadow/recorder/multix/switch" && msg_arg == 1.0)
+    if (msg_string == "/shadow/recorder/multix/switch")
     {
         recorder->setState(RECORDER_STATE_MULTIX);
         switchRecording();
@@ -106,4 +112,25 @@ void RecorderMultixState::execute(string msg_string, float msg_arg)
     {
         offset.set(int(msg_arg));
     }
+}
+
+//--------------------------------------------------------------
+void RecorderMultixState::onNbChange(int &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/1/multixNb", ofToString(value));
+}
+
+//--------------------------------------------------------------
+void RecorderMultixState::onOffsetChange(int &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/1/multixOffset", ofToString(value));
+}
+
+//--------------------------------------------------------------
+void RecorderMultixState::onRecChange(bool &value)
+{
+    static OscGUISender * sender = singleOscSender::Instance();
+    sender->send("/shadow/recorder/multix/switch", ofToString(bIsRecording));
 }
