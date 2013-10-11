@@ -124,7 +124,7 @@ void testApp::createBaseEffects() {
 //    effects.addEffect(effectsFactory.createEffect("BackgroundSimple"));
 //    effects.addEffect(effectsFactory.createEffect("Crop"));
 //    effects.addEffect(effectsFactory.createEffect("Equalize"));
-//    effects.addEffect(effectsFactory.createEffect("Threshold"));
+ //   effects.addEffect(effectsFactory.createEffect("Threshold"));
 //    effects.addEffect(effectsFactory.createEffect("ErodeDilate"));
 //    effects.addEffect(effectsFactory.createEffect("Contour"));
     effects.addEffect(effectsFactory.createEffect("Trails"));

@@ -13,7 +13,7 @@
 #include "ofxPostProcessing.h"
 #include "DrawerManager.h"
 #include "ofxCv.h"
-
+#include "ofxOpenCv.h"
 
 class DrawerManager;
 
@@ -69,15 +69,19 @@ public:
     drawerWings(DrawerManager *m)  {manager = m;}
     ~drawerWings() {};
     
-    void init() {};
+    void init();
     void update(ofBaseHasPixels& source);
     void draw(int x=0, int y=0, int width=0, int height=0);
     void keyPressed(int key) {};
     void execute(string msg_string, float msg_arg) {};
     
-    ofTexture tex;
+    ofxCvGrayscaleImage graySource;
     DrawerManager *manager;
     ofxCv::ContourFinder contourFinder;
+    ofImage wingsR, wingsL;
+    ofFbo fbo; // with alpha
+
+    ofImage pix;
 
 };
 #endif
